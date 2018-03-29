@@ -103,7 +103,7 @@ var county_lable = d3.select("body").append("div")
 //
 //     }
 //load JSON
-d3.json("map.json", function(error, map) {
+d3.json("/ukmap/map.json", function(error, map) {
   var uk=topojson.feature(map,map.objects.UK),
       Ireland=topojson.feature(map,map.objects.IRL_IMN);
       //console.log(Ireland);
