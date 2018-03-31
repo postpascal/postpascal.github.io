@@ -14,5 +14,5 @@ and is capable of resurrecting deceased individuals.
 
 <figure style="width: 150px" class="align-center">
   <img src="{{ '/images/flame.svg' | absolute_url }}" alt="">
-  <figcaption>心里有团永恒的火焰🔥</figcaption>
+  <figcaption>Eternal Flame🔥</figcaption>
 </figure> 
