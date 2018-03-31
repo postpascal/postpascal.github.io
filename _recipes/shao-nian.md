@@ -1,5 +1,6 @@
 ---
 title: "少年"
+author: zhang keke
 image: 
   path: /images/shaonian.jpg
   thumbnail: /images/chocolate-chip-cookies-400x200.jpg
