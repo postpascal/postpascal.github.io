@@ -14,7 +14,7 @@ The Eternal Flame was a mystical, inextinguishable flame
 that contained the true power of the Fire Giant Surtur, and is capable of resurrecting deceased individuals.
 ```
 
-<figure style="width: 250px" class="align-center">
+<figure style="width: 150px" class="align-center">
   <img src="{{ '/images/flame.svg' | absolute_url }}" alt="">
   <figcaption>PCA image.</figcaption>
 </figure> 
