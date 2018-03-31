@@ -1,6 +1,6 @@
 ---
 title: "少年"
-author: zhang keke
+author: Zhang Keke
 image: 
   path: /images/shaonian.jpg
   thumbnail: /images/chocolate-chip-cookies-400x200.jpg
@@ -10,8 +10,6 @@ image:
 
 
 <center>
-
-
 <h1>你曾是少年<h1>
 
 
@@ -49,5 +47,4 @@ image:
 </font>
 </code></pre>
 
-</center>
 
