@@ -1,6 +1,7 @@
 ---
 title: "少年"
 author: Zhang Keke
+date: 2016-12-01
 image: 
   path: /images/shaonian.jpg
   thumbnail: /images/shaonian400x200.jpg
