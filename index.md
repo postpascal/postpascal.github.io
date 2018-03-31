@@ -7,14 +7,11 @@ entries_layout: list
 ---
 
 
-心里有团永恒的火焰🔥(Eternal Flame)。
+心里有团永恒的火焰🔥
 
 ```
-The Eternal Flame was a mystical, inextinguishable flame that contained the true power of the Fire Giant Surtur, and is capable of resurrecting deceased individuals.
+The Eternal Flame was a mystical, inextinguishable flame 
+that contained the true power of the Fire Giant Surtur, and is capable of resurrecting deceased individuals.
 ```
 
-```
-"Okay so let me get this straight. You're gonna put your crown into the Eternal Flame, and then you'll suddenly grow as big as a house?"
-"A mountain!"
-―Thor and Surtur
-```
+![/images/flame.svg](/images/flame.svg)
