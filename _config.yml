@@ -100,15 +100,21 @@ defaults:
       comments: true
       share: true
 # Site Author
-author:
-  name:
+author: 
+  name: Zhang Keke
   picture:
-  email:
+  email: apostpascal@gmail.com
   twitter:
   links:
-    - title:
-      url:
-      icon:
+    - title: 500px
+      url: hhttps://500px.com/apostpascal
+      icon: fab fa-500px
+    - title: GitHub
+      url: https://github.com/postpascal
+      icon: fab fa-github-square
+    - title: Weibo
+      url: https://weibo.com/u/2858024844?refer_flag=1001030101_
+      icon: fab fa-weibo
 
 # Footer Links
 footer_links:
