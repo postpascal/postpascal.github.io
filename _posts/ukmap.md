@@ -12,9 +12,6 @@ tags:
 
 [ukmap](/ukmap)
 
-
-***You could also check this uk map via [http://zhangkeke.name/ukmap/](http://zhangkeke.name/ukmap/) for a better experience(It's my personal blog).***
-
 There are five other items in this folder:
 
 * index.html
