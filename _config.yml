@@ -17,7 +17,7 @@ theme: jekyll-theme-so-simple
 # remote_theme: mmistakes/so-simple-theme
 locale: en-US
 title: "dayoff"
-description: "stay hungry stay foolish😁"
+description: "紫禁之巅🌪"
 baseurl: # the subpath of your site, e.g. "/blog"
 url: https://postpascal.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: /images/tree1.svg # path of site logo, e.g. "/images/logo.png"
