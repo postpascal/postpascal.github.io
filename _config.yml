@@ -17,7 +17,7 @@ theme: jekyll-theme-so-simple
 # remote_theme: mmistakes/so-simple-theme
 locale: en-US
 title: "dayoff"
-description: "keep less keep small."
+description: "stay hungry stay foolish"
 baseurl: # the subpath of your site, e.g. "/blog"
 url: https://postpascal.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: /images/tree1.svg # path of site logo, e.g. "/images/logo.png"
@@ -33,8 +33,8 @@ google_fonts:
 google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 disqus:
   shortname: postpascal-github-io # Disqus shortname, e.g. "my_disqus_shortname"
-twitter:
-  username: opendayoff # site's Twitter username, e.g. "mmistakes"
+#twitter:
+#  username: opendayoff # site's Twitter username, e.g. "mmistakes"
 
 # Liquid
 liquid:
