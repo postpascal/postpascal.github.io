@@ -1,11 +1,32 @@
 ---
-title: "shao  nian"
+title: "少年"
 image: 
-  path: /images/chocolate-chip-cookies-lg.jpg
+  path: /images/shaonian.jpg
   thumbnail: /images/chocolate-chip-cookies-400x200.jpg
-  caption: "Photo from [Pexels](https://www.pexels.com)"
 ---
 
+
+
+
+<center>
+
+---
+### 你曾是少年
+---
+
+<audio controls loop="loop" controls="controls">
+				<source src="/audio/shaonian.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+			</audio>
+
+<pre><code><font size="3">
+你曾是少年，
+倔强勇敢不改变；
+你曾是少年，
+拌嘴吐槽也争先；
+你曾是少年，
+啤酒饺子鸡蛋面；
+你曾是少年，
 熬夜看书少睡眠；
 你曾是少年，
 周易老庄百家言；
@@ -22,11 +43,9 @@ image:
 你曾是少年，
 转身告别不留恋。
 乘风破浪斩敌前，
-男儿至死是少年
+男儿至死是少年。
+</font>
+</code></pre>
 
-## Ingredients
+</center>
 
-<audio controls loop="loop" controls="controls">
-				<source src="/audio/shaonian.mp3" type="audio/mpeg">
-			Your browser does not support the audio element.
-			</audio>
