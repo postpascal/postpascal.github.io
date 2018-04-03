@@ -1,4 +1,278 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-03T21:56:55+08:00</updated><id>http://localhost:4000/</id><title type="html">紫禁之巅</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">智能时代</title><link href="http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3/" rel="alternate" type="text/html" title="智能时代" /><published>2017-12-02T00:00:00+08:00</published><updated>2017-12-02T00:00:00+08:00</updated><id>http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3</id><content type="html" xml:base="http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3/">&lt;h1 id=&quot;智能时代&quot;&gt;智能时代&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-03T22:43:46+08:00</updated><id>http://localhost:4000/</id><title type="html">紫禁之巅</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">Distributed Tensorflow</title><link href="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" rel="alternate" type="text/html" title="Distributed Tensorflow" /><published>2018-04-02T00:00:00+08:00</published><updated>2018-04-02T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow</id><content type="html" xml:base="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/">&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;terminology&quot;&gt;Terminology&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cluster: A cluster is composed of one or more Tensorflow servers, called tasks.&lt;/li&gt;
+  &lt;li&gt;Job: a group of tasks that have a common roal. For instance, parameters server, worker server.&lt;/li&gt;
+  &lt;li&gt;Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;multiple-devices-on-a-single-machine&quot;&gt;Multiple Devices on a Single Machine&lt;/h3&gt;
+&lt;h4 id=&quot;dependencies&quot;&gt;Dependencies:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;CUDA: Nvidia’s Compute Unified Device Architecture Library allows developers to call GPUs&lt;/li&gt;
+  &lt;li&gt;cuDNN: CUDA deep neural network library to call CUDA&lt;/li&gt;
+  &lt;li&gt;tensorflow-gpu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure style=&quot;width: 400px&quot; class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/resources/EF7FF3FE23EE675AA38920A81F91B7E7.png&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;CUDA, cuDNN and Tensorflow &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;managing-gpu-ram&quot;&gt;Managing GPU RAM&lt;/h4&gt;
+&lt;p&gt;By default Tensorflow will grab all the RAM in all available GPUs the first time you run a graph, so if you run a second Tensorflow program, Memory error showing up.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;One solution is to run each process  on different GPU card.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# run script in specific GPU card&lt;/span&gt;
+CUDA_VISIBLE_DEVICES &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0,1 python3 program.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Another option is to set a threshold for Tensorflow, which limits the program can only grab a fraction of GPUs’ memory.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python3&quot;&gt;config = tf.ConfigProto()
+config.gpu_option.per_process_gpu_memory_fraction = 0.4
+session = tf.Session(config=config)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;placing-operations-on-devices&quot;&gt;Placing operations on Devices&lt;/h4&gt;
+
+&lt;p&gt;Using the following code to place operation to a specific device, otherwise it will place to the default device.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Cautions: there is no way to pin nodes on a specific CPUs or a subset CPUS&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/cpu:0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Variable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;multiple-devices-across-multiple-servers&quot;&gt;Multiple Devices Across Multiple Servers&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create a Clusesr&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;cluser_spec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClusterSpec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;worker&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;machine-a.example.com:2222&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#/job:worker/task:0&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;machine-b.example.com:2222&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#/job:worker/task:1&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;ps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;machine-a.example.com:2221&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#/job:ps/task:0&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure style=&quot;width: 400px&quot; class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/resources/5246338809A70A300174F06780A8F7A6.png&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;Distributed Tensorflow &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run a server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cluster_spec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;job_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;worker&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;task_index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# start first worker task&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;server.join()&lt;/code&gt; to wait servers finish&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In distribution tensorflow, variables maintain by resource container. In other words, we can access the variable across different sessions and servers. To avoid name clash, we can wrap variables by using &lt;code class=&quot;highlighter-rouge&quot;&gt;tf.variable_scope&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;tf.container&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;tf.container&lt;/code&gt; is easy to reset and release variables.&lt;/p&gt;
+  &lt;h3 id=&quot;advantages&quot;&gt;Advantages:&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Be able to explore a much larger hyperparameter space when fine-tuning your model&lt;/li&gt;
+    &lt;li&gt;Large ensembles of NN efficiently&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;parallelizing-neural-network-on-a--tensorflow-cluster&quot;&gt;Parallelizing Neural Network on a  Tensorflow Cluster&lt;/h3&gt;
+&lt;h4 id=&quot;one-neural-network-per-device&quot;&gt;One Neural Network per device&lt;/h4&gt;
+
+&lt;figure style=&quot;width: 400px&quot; class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/resources/E856AD8B0ED2C7CDCDB45564C7422896.png&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt; &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;One client per neural network per device.Each device running similar neural network with different hyperparameters.This solution is perfect for hyperparameter tuning.&lt;/p&gt;
+
+&lt;h4 id=&quot;in-graph-versus-between-graph-replication-ensemble&quot;&gt;In-Graph Versus Between-Graph Replication (ensemble)&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;In-Graph: one client,one graph, one session maintains all stuff, one neural network per device.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure style=&quot;width: 400px&quot; class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/resources/2DA0DD8414DA59C6A9C4DA0C4AC202BE.png&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;In-Graph &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Between-Graph: several clients maintain &lt;code class=&quot;highlighter-rouge&quot;&gt;Input&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Output&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Neural Network&lt;/code&gt;. Each Neural network is an individual graph.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure style=&quot;width: 400px&quot; class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/resources/A15BD70A71FED16E09A3B9128E767E5D.png&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;Between-Graph&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;model-parallelism&quot;&gt;Model Parallelism&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Separate Neural network Horizontally or Vertically.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure style=&quot;width: 400px&quot; class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/resources/69478BB7441E6A92A5E495EA467E9BC0.png&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;Model Parallelism&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&quot;data-parallelism&quot;&gt;Data Parallelism&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Each device running same neural network, but feeded different mini-batch data. For each iteration, neural network fetch parameters from &lt;code class=&quot;highlighter-rouge&quot;&gt;PS&lt;/code&gt;, then Gradients from each network aggrated to update parameters in &lt;code class=&quot;highlighter-rouge&quot;&gt;PS&lt;/code&gt;. There are two main approach, &lt;em&gt;synchronous&lt;/em&gt; and &lt;em&gt;asynchronous&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;With synchronous updates, the aggregator waits for all gradients to be available before computing the average and applying the result.The downside is faster replica have to wait slower one at every iteration. To make it more efficient, we can update parameters only if a fraction of replicas has finished.&lt;/li&gt;
+  &lt;li&gt;With asynchronous updates, whenever a replica has finished computing the gradients, it immediately uses them to update the model parameters.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure style=&quot;width: 400px&quot; class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/resources/858A8FB5C9CCA2CD3E954C58C610187A.png&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;Data Parallelism&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tensorflow.org/deploy/distributed&quot;&gt;Distributed Tensorflow&lt;/a&gt;: Tensorflow official doc&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tensorflow/ecosystem&quot;&gt;Echosystem&lt;/a&gt;: tensorflow official github project, a integration of tensorflow with other open-source framework&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://g.co/kgs/dHRoaa&quot;&gt;Hands-on Machine Learning with Scikit_Learn &amp;amp; Tensorflow&lt;/a&gt;: Chapter 12, Distributing Tensorflow Across Devices and Server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>Zhang Keke</name></author><category term="Tensorflow" /><category term="Distribution" /><summary type="html">Terminology Cluster: A cluster is composed of one or more Tensorflow servers, called tasks. Job: a group of tasks that have a common roal. For instance, parameters server, worker server. Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.</summary></entry><entry><title type="html">Machine Learning Tips</title><link href="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/" rel="alternate" type="text/html" title="Machine Learning Tips" /><published>2018-02-23T00:00:00+08:00</published><updated>2018-02-23T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips</id><content type="html" xml:base="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/">&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;p&gt;Recap of Martin Zinkevich’s blog 
+&lt;a href=&quot;http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf&quot;&gt;Best Practices for ML Engineering&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;before-machine-learning&quot;&gt;Before Machine Learning&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Do machine learning like the great engineer you are, not like the expert you aren't.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Machine learning is all of Engineering.
+ML is limited, but engineering is not. 
+Engineering’s destiny is to quantify problems then solve it. In this case, the first target is how to quantify problems — Design metrics.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1: Don’t be afraid to launch a product without machine learning.&lt;/li&gt;
+  &lt;li&gt;2: Make metrics design and implementation a priority.&lt;/li&gt;
+  &lt;li&gt;3: Choose machine learning over a complex heuristic.
+    &lt;h3 id=&quot;ml-phase-i-your-first-pipeline&quot;&gt;ML Phase I: Your First Pipeline&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;4: Keep the first model simple and get the infrastructure right.&lt;/li&gt;
+  &lt;li&gt;5: Test the infrastructure independently from the machine learning.&lt;/li&gt;
+  &lt;li&gt;6: Be careful about dropped data when copying pipelines.&lt;/li&gt;
+  &lt;li&gt;7: Turn heuristics into features, or handle them externally.
+    &lt;blockquote&gt;
+      &lt;p&gt;stand on giant’s shoulders&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;monitoring&quot;&gt;Monitoring&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;8: Know the freshness requirements of your system.
+    &lt;blockquote&gt;
+      &lt;p&gt;How fast you will lost revenue with time goes by.How open you should update your model&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;9: Detect problems before exporting models.&lt;/li&gt;
+  &lt;li&gt;10: Watch for silent failures.
+    &lt;blockquote&gt;
+      &lt;p&gt;Track statistics of Data, before preprocessing and feeds&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;11: Give feature sets owners and documentation.
+    &lt;h3 id=&quot;your-first-objective&quot;&gt;Your First Objective&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;12: Don’t overthink which objective you choose to directly optimize.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;13: Choose a simple, observable and attributable metric for your first objective.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;14: Starting with an interpretable model makes debugging easier.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;15: Separate Spam Filtering and Quality Ranking in a Policy Layer.
+    &lt;h3 id=&quot;ml-phase-ii-feature-engineering&quot;&gt;ML Phase II: Feature Engineering&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;16: Plan to launch and iterate.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;17: Start with directly observed and reported features as opposed to learned features.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;18: Explore with features of content that generalize across contexts.&lt;/li&gt;
+  &lt;li&gt;19: Use very specific features when you can.&lt;/li&gt;
+  &lt;li&gt;20: Combine and modify existing features to create new features in human understandable ways.&lt;/li&gt;
+  &lt;li&gt;21: The number of feature weights you can learn in a linear model is roughly proportional to the amount of data you have.&lt;/li&gt;
+  &lt;li&gt;22: Clean up features you are no longer using.
+    &lt;blockquote&gt;
+      &lt;p&gt;Unused features create technical debt&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;human-analysis-of-the-system&quot;&gt;Human Analysis of the System&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;23: You are not a typical end user.&lt;/li&gt;
+  &lt;li&gt;24: Measure the delta between models.&lt;/li&gt;
+  &lt;li&gt;25: When choosing models, utilitarian performance trumps predictive power.&lt;/li&gt;
+  &lt;li&gt;26: Look for patterns in the measured errors, and create new features.&lt;/li&gt;
+  &lt;li&gt;27: Try to quantify observed undesirable behavior.
+    &lt;blockquote&gt;
+      &lt;p&gt;Quantify bad part and improve it. Again, Metric is the first important thing
+At this point, they should do whatever it takes to turn their gripes into solid numbers.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;28: Be aware that identical short term behavior does not imply identical long term behavior.
+    &lt;h3 id=&quot;training-serving-skew&quot;&gt;Training-Serving Skew&lt;/h3&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;The best solution is to explicitly monitor it so that system and  data changes don’t introduce skew unnoticed.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;29: The best way to make sure that you train like you serve is to save the set of features used at serving time, and then pipe those features to a log to use them at training time.&lt;/li&gt;
+  &lt;li&gt;30: Importance weight sampled data, don’t arbitrarily drop it!&lt;/li&gt;
+  &lt;li&gt;31: Beware that if you join data from a table at training and serving time, the data in the table may change.&lt;/li&gt;
+  &lt;li&gt;32: Reuse code between your training pipeline and your serving pipeline whenever possible.&lt;/li&gt;
+  &lt;li&gt;33: If you produce a model based on the data until January 5th, test the model on the data from January 6th and after.
+    &lt;blockquote&gt;
+      &lt;p&gt;use next-day data&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;34: In binary classification for filtering (such as spam detection or determining interesting emails), make small short term sacrifices in performance for very clean data.&lt;/li&gt;
+  &lt;li&gt;35: Beware of the inherent skew in ranking problems.&lt;/li&gt;
+  &lt;li&gt;36: Avoid feedback loops with positional features.&lt;/li&gt;
+  &lt;li&gt;37: Measure Training/Serving Skew.
+    &lt;blockquote&gt;
+      &lt;p&gt;Training data, validation data, test data(next data), live data.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ml-phase-iii-slowed-growth-optimization-refinement-and-complex-models&quot;&gt;ML Phase III: Slowed Growth, Optimization Refinement, and Complex Models&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;38: Don’t waste time on new features if unaligned objectives have become the issue.&lt;/li&gt;
+  &lt;li&gt;39: Launch decisions will depend upon more than one metric.&lt;/li&gt;
+  &lt;li&gt;40: Keep ensembles simple.&lt;/li&gt;
+  &lt;li&gt;41: When performance plateaus, look for qualitatively new sources of information to add rather than refining existing signals.&lt;/li&gt;
+  &lt;li&gt;42: Don’t expect diversity, personalization, or relevance to be as correlated with popularity as you think they are.&lt;/li&gt;
+  &lt;li&gt;43: Your friends tend to be the same across different products. Your interests tend not to be.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="Tips" /><summary type="html">Recap of Martin Zinkevich’s blog Best Practices for ML Engineering</summary></entry><entry><title type="html">智能时代</title><link href="http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3/" rel="alternate" type="text/html" title="智能时代" /><published>2017-12-02T00:00:00+08:00</published><updated>2017-12-02T00:00:00+08:00</updated><id>http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3</id><content type="html" xml:base="http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3/">&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1 id=&quot;智能时代&quot;&gt;智能时代&lt;/h1&gt;
 
 &lt;hr /&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;出版时间:2017
@@ -17,7 +291,9 @@
 &lt;h2 id=&quot;难点&quot;&gt;难点：&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;传统行业，比如养殖业，农业，从事这些行业的人大多文化水平不高，对他们的数据难以收集&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="AI" /><summary type="html">智能时代</summary></entry><entry><title type="html">Maximum Likelihood Estimation</title><link href="http://localhost:4000/math/mle/" rel="alternate" type="text/html" title="Maximum Likelihood Estimation" /><published>2017-02-01T00:00:00+08:00</published><updated>2017-02-01T00:00:00+08:00</updated><id>http://localhost:4000/math/mle</id><content type="html" xml:base="http://localhost:4000/math/mle/">&lt;h3 id=&quot;bayesian-rule&quot;&gt;Bayesian Rule:&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="AI" /><summary type="html">智能时代</summary></entry><entry><title type="html">Maximum Likelihood Estimation</title><link href="http://localhost:4000/math/mle/" rel="alternate" type="text/html" title="Maximum Likelihood Estimation" /><published>2017-02-01T00:00:00+08:00</published><updated>2017-02-01T00:00:00+08:00</updated><id>http://localhost:4000/math/mle</id><content type="html" xml:base="http://localhost:4000/math/mle/">&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;bayesian-rule&quot;&gt;Bayesian Rule:&lt;/h3&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;P(\theta|D)=\frac{P(D|\theta)P(\theta)}{P(D)}&lt;/script&gt;
 
@@ -44,7 +320,9 @@
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{u}=\frac{1}{|D|}\sum\limits_{x_i \in D} x_i&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{\sigma}^2=\frac{1}{|D|}\sum\limits_{x_i \in D}(x_i-\hat{u})(x_i-\hat{u})^T&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="MLE" /><summary type="html">Bayesian Rule:</summary></entry><entry><title type="html">PATH</title><link href="http://localhost:4000/linux/path/" rel="alternate" type="text/html" title="PATH" /><published>2015-09-10T00:00:00+08:00</published><updated>2015-09-10T00:00:00+08:00</updated><id>http://localhost:4000/linux/path</id><content type="html" xml:base="http://localhost:4000/linux/path/">&lt;h2 id=&quot;how-to-add-commands-to-path-in-linux-or-mac&quot;&gt;How to add commands to $PATH in Linux or Mac?&lt;/h2&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{\sigma}^2=\frac{1}{|D|}\sum\limits_{x_i \in D}(x_i-\hat{u})(x_i-\hat{u})^T&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="MLE" /><summary type="html">Bayesian Rule:</summary></entry><entry><title type="html">PATH</title><link href="http://localhost:4000/linux/path/" rel="alternate" type="text/html" title="PATH" /><published>2015-09-10T00:00:00+08:00</published><updated>2015-09-10T00:00:00+08:00</updated><id>http://localhost:4000/linux/path</id><content type="html" xml:base="http://localhost:4000/linux/path/">&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;how-to-add-commands-to-path-in-linux-or-mac&quot;&gt;How to add commands to $PATH in Linux or Mac?&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;h3 id=&quot;what-is-path&quot;&gt;What is PATH?&lt;/h3&gt;
 
@@ -82,7 +360,10 @@ OR
 
 &lt;ul&gt;
   &lt;li&gt;Done&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="path" /><summary type="html">How to add commands to $PATH in Linux or Mac? What is PATH?</summary></entry><entry><title type="html">MathJax test Fourier Transform</title><link href="http://localhost:4000/math/test/" rel="alternate" type="text/html" title="MathJax test Fourier Transform" /><published>2015-09-01T00:00:00+08:00</published><updated>2015-09-01T00:00:00+08:00</updated><id>http://localhost:4000/math/test</id><content type="html" xml:base="http://localhost:4000/math/test/">&lt;p&gt;Fourier Transform:&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="path" /><summary type="html">How to add commands to $PATH in Linux or Mac? What is PATH?</summary></entry><entry><title type="html">MathJax test Fourier Transform</title><link href="http://localhost:4000/math/test/" rel="alternate" type="text/html" title="MathJax test Fourier Transform" /><published>2015-09-01T00:00:00+08:00</published><updated>2015-09-01T00:00:00+08:00</updated><id>http://localhost:4000/math/test</id><content type="html" xml:base="http://localhost:4000/math/test/">&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Fourier Transform:&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;F(\omega)=\int_{-\infty}^{+\infty}f(\tau)e^{-j\omega\tau}d\tau&lt;/script&gt;
 
@@ -92,4 +373,4 @@ OR
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;f(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}F(\omega)e^{j\omega t}d\omega&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(t)=\mathscr{F}^{-1}[F(\omega)]&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="Fourier Transform" /><summary type="html">Fourier Transform:</summary></entry></feed>
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(t)=\mathscr{F}^{-1}[F(\omega)]&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="Fourier Transform" /><summary type="html"></summary></entry></feed>

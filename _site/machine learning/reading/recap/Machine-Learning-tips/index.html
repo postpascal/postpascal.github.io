@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.1.0
+    Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Machine Learning Tips | 紫禁之巅</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Machine Learning Tips" />
+<meta name="author" content="Zhang Keke" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recap of Martin Zinkevich’s blog Best Practices for ML Engineering" />
+<meta property="og:description" content="Recap of Martin Zinkevich’s blog Best Practices for ML Engineering" />
+<link rel="canonical" href="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/" />
+<meta property="og:url" content="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/" />
+<meta property="og:site_name" content="紫禁之巅" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-23T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"Recap of Martin Zinkevich’s blog Best Practices for ML Engineering","author":{"@type":"Person","name":"Zhang Keke"},"@type":"BlogPosting","url":"http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/tree1.svg"},"name":"Zhang Keke"},"headline":"Machine Learning Tips","dateModified":"2018-02-23T00:00:00+08:00","datePublished":"2018-02-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="紫禁之巅" href="/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  machine-learning-tips">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/">Home</a></li><li><a href="/posts/">Posts</a></li><li><a href="/categories/">Categories</a></li><li><a href="/tags/">Tags</a></li><li><a href="/recipes/">Recipes</a></li><li><a href="/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/" class="site-logo" rel="home" title="紫禁之巅">
+        <img src="/images/tree1.svg" class="site-logo-img animated fadeInDown" alt="紫禁之巅">
+      </a>
+    
+    
+      <h1 class="site-title animated fadeIn"><a href="/">紫禁之巅</a></h1>
+      <p class="site-description animated fadeIn" itemprop="description">stay hungry stay foolish</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Machine Learning Tips
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="/images/t.svg" class="author-avatar u-photo" alt="Zhang Keke"><div class="author-info"><div class="author-name">
+        <em>by</em> <span class="p-name">Zhang Keke</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="hhttps://500px.com/apostpascal"><i class="fab fa-500px fa-lg" title="500px"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/postpascal"><i class="fab fa-github-square fa-lg" title="GitHub"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://weibo.com/u/2858024844?refer_flag=1001030101_"><i class="fab fa-weibo fa-lg" title="Weibo"></i></a>
+          </li></ul>
+
+<span class="read-time">3 min read</span>
+
+    <time class="page-date dt-published" datetime="2018-02-23T00:00:00+08:00"><a class="u-url" href="">February 23, 2018</a>
+</time>
+
+  </div>
+</div>
+
+        
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a class="p-category" href="/categories/#machine-learning" title="Pages filed under Machine Learning">Machine Learning</a></li><li class="page-taxonomy"><a class="p-category" href="/categories/#reading" title="Pages filed under Reading">Reading</a></li><li class="page-taxonomy"><a class="p-category" href="/categories/#recap" title="Pages filed under Recap">Recap</a></li>
+  </ul>
+
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/tags/#tips" title="Pages tagged Tips" rel="tag">Tips</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <hr />
+<hr />
+<p>Recap of Martin Zinkevich’s blog 
+<a href="http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf">Best Practices for ML Engineering</a></p>
+
+<hr />
+
+<h3 id="before-machine-learning">Before Machine Learning</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Do machine learning like the great engineer you are, not like the expert you aren't.
+</code></pre></div></div>
+
+<blockquote>
+  <p>Machine learning is all of Engineering.
+ML is limited, but engineering is not. 
+Engineering’s destiny is to quantify problems then solve it. In this case, the first target is how to quantify problems — Design metrics.</p>
+</blockquote>
+
+<ul>
+  <li>1: Don’t be afraid to launch a product without machine learning.</li>
+  <li>2: Make metrics design and implementation a priority.</li>
+  <li>3: Choose machine learning over a complex heuristic.
+    <h3 id="ml-phase-i-your-first-pipeline">ML Phase I: Your First Pipeline</h3>
+  </li>
+  <li>4: Keep the first model simple and get the infrastructure right.</li>
+  <li>5: Test the infrastructure independently from the machine learning.</li>
+  <li>6: Be careful about dropped data when copying pipelines.</li>
+  <li>7: Turn heuristics into features, or handle them externally.
+    <blockquote>
+      <p>stand on giant’s shoulders</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+  <li>8: Know the freshness requirements of your system.
+    <blockquote>
+      <p>How fast you will lost revenue with time goes by.How open you should update your model</p>
+    </blockquote>
+  </li>
+  <li>9: Detect problems before exporting models.</li>
+  <li>10: Watch for silent failures.
+    <blockquote>
+      <p>Track statistics of Data, before preprocessing and feeds</p>
+    </blockquote>
+  </li>
+  <li>11: Give feature sets owners and documentation.
+    <h3 id="your-first-objective">Your First Objective</h3>
+  </li>
+  <li>12: Don’t overthink which objective you choose to directly optimize.</li>
+  <li>
+    <p>13: Choose a simple, observable and attributable metric for your first objective.</p>
+  </li>
+  <li>
+    <p>14: Starting with an interpretable model makes debugging easier.</p>
+  </li>
+  <li>15: Separate Spam Filtering and Quality Ranking in a Policy Layer.
+    <h3 id="ml-phase-ii-feature-engineering">ML Phase II: Feature Engineering</h3>
+  </li>
+  <li>16: Plan to launch and iterate.</li>
+  <li>
+    <p>17: Start with directly observed and reported features as opposed to learned features.</p>
+  </li>
+  <li>18: Explore with features of content that generalize across contexts.</li>
+  <li>19: Use very specific features when you can.</li>
+  <li>20: Combine and modify existing features to create new features in human understandable ways.</li>
+  <li>21: The number of feature weights you can learn in a linear model is roughly proportional to the amount of data you have.</li>
+  <li>22: Clean up features you are no longer using.
+    <blockquote>
+      <p>Unused features create technical debt</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="human-analysis-of-the-system">Human Analysis of the System</h3>
+<ul>
+  <li>23: You are not a typical end user.</li>
+  <li>24: Measure the delta between models.</li>
+  <li>25: When choosing models, utilitarian performance trumps predictive power.</li>
+  <li>26: Look for patterns in the measured errors, and create new features.</li>
+  <li>27: Try to quantify observed undesirable behavior.
+    <blockquote>
+      <p>Quantify bad part and improve it. Again, Metric is the first important thing
+At this point, they should do whatever it takes to turn their gripes into solid numbers.</p>
+    </blockquote>
+  </li>
+  <li>28: Be aware that identical short term behavior does not imply identical long term behavior.
+    <h3 id="training-serving-skew">Training-Serving Skew</h3>
+    <blockquote>
+      <p>The best solution is to explicitly monitor it so that system and  data changes don’t introduce skew unnoticed.</p>
+    </blockquote>
+  </li>
+  <li>29: The best way to make sure that you train like you serve is to save the set of features used at serving time, and then pipe those features to a log to use them at training time.</li>
+  <li>30: Importance weight sampled data, don’t arbitrarily drop it!</li>
+  <li>31: Beware that if you join data from a table at training and serving time, the data in the table may change.</li>
+  <li>32: Reuse code between your training pipeline and your serving pipeline whenever possible.</li>
+  <li>33: If you produce a model based on the data until January 5th, test the model on the data from January 6th and after.
+    <blockquote>
+      <p>use next-day data</p>
+    </blockquote>
+  </li>
+  <li>34: In binary classification for filtering (such as spam detection or determining interesting emails), make small short term sacrifices in performance for very clean data.</li>
+  <li>35: Beware of the inherent skew in ranking problems.</li>
+  <li>36: Avoid feedback loops with positional features.</li>
+  <li>37: Measure Training/Serving Skew.
+    <blockquote>
+      <p>Training data, validation data, test data(next data), live data.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="ml-phase-iii-slowed-growth-optimization-refinement-and-complex-models">ML Phase III: Slowed Growth, Optimization Refinement, and Complex Models</h3>
+<ul>
+  <li>38: Don’t waste time on new features if unaligned objectives have become the issue.</li>
+  <li>39: Launch decisions will depend upon more than one metric.</li>
+  <li>40: Keep ensembles simple.</li>
+  <li>41: When performance plateaus, look for qualitatively new sources of information to add rather than refining existing signals.</li>
+  <li>42: Don’t expect diversity, personalization, or relevance to be as correlated with popularity as you think they are.</li>
+  <li>43: Your friends tend to be the same across different products. Your interests tend not to be.</li>
+</ul>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmachine%2520learning%2Freading%2Frecap%2FMachine-Learning-tips%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Machine+Learning+Tips%20http%3A%2F%2Flocalhost%3A4000%2Fmachine%2520learning%2Freading%2Frecap%2FMachine-Learning-tips%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmachine%2520learning%2Freading%2Frecap%2FMachine-Learning-tips%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=Machine+Learning+Tips&url=http%3A%2F%2Flocalhost%3A4000%2Fmachine%2520learning%2Freading%2Frecap%2FMachine-Learning-tips%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+          
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> 智能时代
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/machine%20learning/deep%20learning/distributed-tensorflow/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        Distributed Tensorflow
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="/atom.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2018 紫禁之巅. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  </body>
+
+</html>
