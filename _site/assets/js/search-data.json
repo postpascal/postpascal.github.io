@@ -1,0 +1,26 @@
+var store = [{
+        "title": "MathJax test Fourier Transform",
+        "excerpt":"Fourier Transform: Inverse Fourier Transform: ","categories": ["math"],
+        "tags": ["Fourier Transform"],
+        "url": "http://localhost:4000/math/test/"
+      },{
+        "title": "PATH",
+        "excerpt":"How to add commands to $PATH in Linux or Mac? What is PATH? PATH is a variable in $ \\star$nix system which tells the command path Option1:Set PATH for your current shell session export PATH=$PATH:/path/to/your/directory  DoneOption2:Change your PATH permanently   Edit your .bash_profile(if you ues Bash) or .zshrc( if using zsh)  add path at the end of the fileexport PATH=$PATH:/path/to/your/directoryORexport PATH=/path/to/your/directory:$PATH  Active your changessource .bash_profileORsource .zshrc  Done","categories": ["linux"],
+        "tags": ["path"],
+        "url": "http://localhost:4000/linux/path/"
+      },{
+        "title": "Maximum Likelihood Estimation",
+        "excerpt":"Bayesian Rule: $P(D \\mid \\theta) \\Rightarrow$ Likelihood $P(\\theta) \\Rightarrow$ prior $P(\\theta \\mid D) \\Rightarrow$ posterior $P(D) \\Rightarrow$ marginal likelihood Maximum Likelihood Estimation (MLE) AKA:最大似然估计，likelihood AKA: 似然函数 Apply log operation to avoid underflow For instance,if  ","categories": ["math"],
+        "tags": ["MLE"],
+        "url": "http://localhost:4000/math/mle/"
+      },{
+        "title": "智能时代",
+        "excerpt":"智能时代 出版时间:2017作者:吴军正如书名一样，书里描绘里一个智能的时代。或者说是一个数据驱动的时代。科技的进步来源于人类对自然或或者说是事物的认知。也可以换一种说法，是来源于数据。人类的进步就是数据的积累。人们不断的从数据里总结，学习。从而才能产生知识—-一种对数据加工而得到的结论。人类的早期对数据的收集都比较慢，即没有工具，也没有处理的方法。这也就造成了人类的认知不足。随着时间的发展，数据量渐渐增大，人类可以从数据中提炼，挖掘出有效的信息，根据先验知识或者是由数据驱动。这就是我的工作，有效的挖掘数据的潜在价值，利用数据提取信息，进而用这些信息做一些事。所谓智能，不过是把数据中的信息挖掘出智能。比方说图像分类，人脸识别，声音识别。都是来源于数据，并且对数据加工，提取数据的共性，并且放大那些决定性的差异，然后才进行分类。另外一方面也十分重要，那就是对数据的收集。或者说是制造数据。这是对数据智能的前提。 总的来说，就是用智能改进传统行业，分两步   利用新的硬件收集传统行业的数据，量化传统行业的各个关键部分，对数据收集整理  通过数据对自身的反馈做出改变，并且用数据引领企业。难点：   传统行业，比如养殖业，农业，从事这些行业的人大多文化水平不高，对他们的数据难以收集","categories": ["extraction","reading"],
+        "tags": ["AI"],
+        "url": "http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3/"
+      },{
+        "title": "少年",
+        "excerpt":"你曾是少年\t\t\t\t\t\t\tYour browser does not support the audio element.\t\t\t你曾是少年，倔强勇敢不改变；你曾是少年，拌嘴吐槽也争先；你曾是少年，啤酒饺子鸡蛋面；你曾是少年，熬夜看书少睡眠；你曾是少年，周易老庄百家言；你曾是少年，江天万里不挂念；你曾是少年，物化生数都等闲；你曾是少年，追云逐日不自谦；你曾是少年，锦绣河山誓踏遍；你曾是少年，怒马扬尘花看厌；你曾是少年，转身告别不留恋。乘风破浪斩敌前，男儿至死是少年。  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/recipes/shao-nian/"
+      }]
