@@ -10,8 +10,7 @@ tags:
   - Tips
 ---
 
----
----
+
 Recap of Martin Zinkevich's blog 
 [Best Practices for ML Engineering](http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf)
 

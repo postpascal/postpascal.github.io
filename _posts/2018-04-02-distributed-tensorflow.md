@@ -10,8 +10,7 @@ tags:
   - Distribution
 ---
 
----
----
+
 ### Terminology
 * Cluster: A cluster is composed of one or more Tensorflow servers, called tasks.
 * Job: a group of tasks that have a common roal. For instance, parameters server, worker server.

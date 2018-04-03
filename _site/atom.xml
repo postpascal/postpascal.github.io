@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-03T22:43:46+08:00</updated><id>http://localhost:4000/</id><title type="html">紫禁之巅</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">Distributed Tensorflow</title><link href="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" rel="alternate" type="text/html" title="Distributed Tensorflow" /><published>2018-04-02T00:00:00+08:00</published><updated>2018-04-02T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow</id><content type="html" xml:base="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/">&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;terminology&quot;&gt;Terminology&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-03T22:55:12+08:00</updated><id>http://localhost:4000/</id><title type="html">紫禁之巅</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">Distributed Tensorflow</title><link href="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" rel="alternate" type="text/html" title="Distributed Tensorflow" /><published>2018-04-02T00:00:00+08:00</published><updated>2018-04-02T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow</id><content type="html" xml:base="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/">&lt;h3 id=&quot;terminology&quot;&gt;Terminology&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Cluster: A cluster is composed of one or more Tensorflow servers, called tasks.&lt;/li&gt;
   &lt;li&gt;Job: a group of tasks that have a common roal. For instance, parameters server, worker server.&lt;/li&gt;
@@ -150,9 +148,7 @@ session = tf.Session(config=config)
   &lt;li&gt;&lt;a href=&quot;https://g.co/kgs/dHRoaa&quot;&gt;Hands-on Machine Learning with Scikit_Learn &amp;amp; Tensorflow&lt;/a&gt;: Chapter 12, Distributing Tensorflow Across Devices and Server&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;</content><author><name>Zhang Keke</name></author><category term="Tensorflow" /><category term="Distribution" /><summary type="html">Terminology Cluster: A cluster is composed of one or more Tensorflow servers, called tasks. Job: a group of tasks that have a common roal. For instance, parameters server, worker server. Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.</summary></entry><entry><title type="html">Machine Learning Tips</title><link href="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/" rel="alternate" type="text/html" title="Machine Learning Tips" /><published>2018-02-23T00:00:00+08:00</published><updated>2018-02-23T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips</id><content type="html" xml:base="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/">&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;p&gt;Recap of Martin Zinkevich’s blog 
+&lt;hr /&gt;</content><author><name>Zhang Keke</name></author><category term="Tensorflow" /><category term="Distribution" /><summary type="html">Terminology Cluster: A cluster is composed of one or more Tensorflow servers, called tasks. Job: a group of tasks that have a common roal. For instance, parameters server, worker server. Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.</summary></entry><entry><title type="html">Machine Learning Tips</title><link href="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/" rel="alternate" type="text/html" title="Machine Learning Tips" /><published>2018-02-23T00:00:00+08:00</published><updated>2018-02-23T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips</id><content type="html" xml:base="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/">&lt;p&gt;Recap of Martin Zinkevich’s blog 
 &lt;a href=&quot;http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf&quot;&gt;Best Practices for ML Engineering&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -270,9 +266,7 @@ At this point, they should do whatever it takes to turn their gripes into solid 
   &lt;li&gt;41: When performance plateaus, look for qualitatively new sources of information to add rather than refining existing signals.&lt;/li&gt;
   &lt;li&gt;42: Don’t expect diversity, personalization, or relevance to be as correlated with popularity as you think they are.&lt;/li&gt;
   &lt;li&gt;43: Your friends tend to be the same across different products. Your interests tend not to be.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="Tips" /><summary type="html">Recap of Martin Zinkevich’s blog Best Practices for ML Engineering</summary></entry><entry><title type="html">智能时代</title><link href="http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3/" rel="alternate" type="text/html" title="智能时代" /><published>2017-12-02T00:00:00+08:00</published><updated>2017-12-02T00:00:00+08:00</updated><id>http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3</id><content type="html" xml:base="http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3/">&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;h1 id=&quot;智能时代&quot;&gt;智能时代&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="Tips" /><summary type="html">Recap of Martin Zinkevich’s blog Best Practices for ML Engineering</summary></entry><entry><title type="html">智能时代</title><link href="http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3/" rel="alternate" type="text/html" title="智能时代" /><published>2017-12-02T00:00:00+08:00</published><updated>2017-12-02T00:00:00+08:00</updated><id>http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3</id><content type="html" xml:base="http://localhost:4000/extraction/reading/%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3/">&lt;h1 id=&quot;智能时代&quot;&gt;智能时代&lt;/h1&gt;
 
 &lt;hr /&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;出版时间:2017
@@ -291,9 +285,7 @@ At this point, they should do whatever it takes to turn their gripes into solid 
 &lt;h2 id=&quot;难点&quot;&gt;难点：&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;传统行业，比如养殖业，农业，从事这些行业的人大多文化水平不高，对他们的数据难以收集&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="AI" /><summary type="html">智能时代</summary></entry><entry><title type="html">Maximum Likelihood Estimation</title><link href="http://localhost:4000/math/mle/" rel="alternate" type="text/html" title="Maximum Likelihood Estimation" /><published>2017-02-01T00:00:00+08:00</published><updated>2017-02-01T00:00:00+08:00</updated><id>http://localhost:4000/math/mle</id><content type="html" xml:base="http://localhost:4000/math/mle/">&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;bayesian-rule&quot;&gt;Bayesian Rule:&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="AI" /><summary type="html">智能时代</summary></entry><entry><title type="html">Maximum Likelihood Estimation</title><link href="http://localhost:4000/math/mle/" rel="alternate" type="text/html" title="Maximum Likelihood Estimation" /><published>2017-02-01T00:00:00+08:00</published><updated>2017-02-01T00:00:00+08:00</updated><id>http://localhost:4000/math/mle</id><content type="html" xml:base="http://localhost:4000/math/mle/">&lt;h3 id=&quot;bayesian-rule&quot;&gt;Bayesian Rule:&lt;/h3&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;P(\theta|D)=\frac{P(D|\theta)P(\theta)}{P(D)}&lt;/script&gt;
 
@@ -320,9 +312,7 @@ At this point, they should do whatever it takes to turn their gripes into solid 
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{u}=\frac{1}{|D|}\sum\limits_{x_i \in D} x_i&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{\sigma}^2=\frac{1}{|D|}\sum\limits_{x_i \in D}(x_i-\hat{u})(x_i-\hat{u})^T&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="MLE" /><summary type="html">Bayesian Rule:</summary></entry><entry><title type="html">PATH</title><link href="http://localhost:4000/linux/path/" rel="alternate" type="text/html" title="PATH" /><published>2015-09-10T00:00:00+08:00</published><updated>2015-09-10T00:00:00+08:00</updated><id>http://localhost:4000/linux/path</id><content type="html" xml:base="http://localhost:4000/linux/path/">&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;h2 id=&quot;how-to-add-commands-to-path-in-linux-or-mac&quot;&gt;How to add commands to $PATH in Linux or Mac?&lt;/h2&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{\sigma}^2=\frac{1}{|D|}\sum\limits_{x_i \in D}(x_i-\hat{u})(x_i-\hat{u})^T&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="MLE" /><summary type="html">Bayesian Rule:</summary></entry><entry><title type="html">PATH</title><link href="http://localhost:4000/linux/path/" rel="alternate" type="text/html" title="PATH" /><published>2015-09-10T00:00:00+08:00</published><updated>2015-09-10T00:00:00+08:00</updated><id>http://localhost:4000/linux/path</id><content type="html" xml:base="http://localhost:4000/linux/path/">&lt;h2 id=&quot;how-to-add-commands-to-path-in-linux-or-mac&quot;&gt;How to add commands to $PATH in Linux or Mac?&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;h3 id=&quot;what-is-path&quot;&gt;What is PATH?&lt;/h3&gt;
 
@@ -360,10 +350,7 @@ OR
 
 &lt;ul&gt;
   &lt;li&gt;Done&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="path" /><summary type="html">How to add commands to $PATH in Linux or Mac? What is PATH?</summary></entry><entry><title type="html">MathJax test Fourier Transform</title><link href="http://localhost:4000/math/test/" rel="alternate" type="text/html" title="MathJax test Fourier Transform" /><published>2015-09-01T00:00:00+08:00</published><updated>2015-09-01T00:00:00+08:00</updated><id>http://localhost:4000/math/test</id><content type="html" xml:base="http://localhost:4000/math/test/">&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;Fourier Transform:&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="path" /><summary type="html">How to add commands to $PATH in Linux or Mac? What is PATH?</summary></entry><entry><title type="html">MathJax test Fourier Transform</title><link href="http://localhost:4000/math/test/" rel="alternate" type="text/html" title="MathJax test Fourier Transform" /><published>2015-09-01T00:00:00+08:00</published><updated>2015-09-01T00:00:00+08:00</updated><id>http://localhost:4000/math/test</id><content type="html" xml:base="http://localhost:4000/math/test/">&lt;p&gt;Fourier Transform:&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;F(\omega)=\int_{-\infty}^{+\infty}f(\tau)e^{-j\omega\tau}d\tau&lt;/script&gt;
 
@@ -373,4 +360,4 @@ OR
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;f(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}F(\omega)e^{j\omega t}d\omega&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(t)=\mathscr{F}^{-1}[F(\omega)]&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="Fourier Transform" /><summary type="html"></summary></entry></feed>
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(t)=\mathscr{F}^{-1}[F(\omega)]&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="Fourier Transform" /><summary type="html">Fourier Transform:</summary></entry></feed>
