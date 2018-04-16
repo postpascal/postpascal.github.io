@@ -16,20 +16,20 @@
   
     
     <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Maximum Likelihood Estimation | 紫禁之巅</title>
+<title>Products | 紫禁之巅</title>
 <meta name="generator" content="Jekyll v3.7.3" />
-<meta property="og:title" content="Maximum Likelihood Estimation" />
+<meta property="og:title" content="Products" />
 <meta name="author" content="Zhang Keke" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Bayesian Rule:" />
-<meta property="og:description" content="Bayesian Rule:" />
-<link rel="canonical" href="http://localhost:4000/math/mle/" />
-<meta property="og:url" content="http://localhost:4000/math/mle/" />
+<meta name="description" content="Dot Product(点积)" />
+<meta property="og:description" content="Dot Product(点积)" />
+<link rel="canonical" href="http://localhost:4000/math/products/" />
+<meta property="og:url" content="http://localhost:4000/math/products/" />
 <meta property="og:site_name" content="紫禁之巅" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-02-01T00:00:00+08:00" />
+<meta property="article:published_time" content="2018-04-16T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"Bayesian Rule:","author":{"@type":"Person","name":"Zhang Keke"},"@type":"BlogPosting","url":"http://localhost:4000/math/mle/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/tree1.svg"},"name":"Zhang Keke"},"headline":"Maximum Likelihood Estimation","dateModified":"2017-02-01T00:00:00+08:00","datePublished":"2017-02-01T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/math/mle/"},"@context":"http://schema.org"}</script>
+{"description":"Dot Product(点积)","author":{"@type":"Person","name":"Zhang Keke"},"@type":"BlogPosting","url":"http://localhost:4000/math/products/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/tree1.svg"},"name":"Zhang Keke"},"headline":"Products","dateModified":"2018-04-16T00:00:00+08:00","datePublished":"2018-04-16T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/math/products/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -55,7 +55,7 @@
 </head>
 
 
-  <body class="layout--post  maximum-likelihood-estimation">
+  <body class="layout--post  products">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -97,7 +97,7 @@
       <header class="page-header">
         
         
-          <h1 id="page-title" class="page-title p-name">Maximum Likelihood Estimation
+          <h1 id="page-title" class="page-title p-name">Products
 </h1>
         
       </header>
@@ -115,7 +115,7 @@
 
 <span class="read-time">~1 min read</span>
 
-    <time class="page-date dt-published" datetime="2017-02-01T00:00:00+08:00"><a class="u-url" href="">February 1, 2017</a>
+    <time class="page-date dt-published" datetime="2018-04-16T00:00:00+08:00"><a class="u-url" href="">April 16, 2018</a>
 </time>
 
   </div>
@@ -129,7 +129,7 @@
 
         
   <h3 class="page-taxonomies-title">Tags</h3>
-  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/tags/#mle" title="Pages tagged MLE" rel="tag">MLE</a></li>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/tags/#math" title="Pages tagged math" rel="tag">math</a></li><li class="page-taxonomy"><a href="/tags/#linear-algebra" title="Pages tagged linear algebra" rel="tag">linear algebra</a></li>
   </ul>
 
 
@@ -137,43 +137,38 @@
 
       <div class="page-content">
         <div class="e-content">
-          <h3 id="bayesian-rule">Bayesian Rule:</h3>
+          <h3 id="dot-product点积">Dot Product(点积)</h3>
 
-<script type="math/tex; mode=display">P(\theta|D)=\frac{P(D|\theta)P(\theta)}{P(D)}</script>
+<script type="math/tex; mode=display">\vec{a}=[a_1,a_2,a_3]</script>
 
-<p>$P(D \mid \theta) \Rightarrow$ Likelihood</p>
+<script type="math/tex; mode=display">\vec{b}=[b_1, b_2, b_3]</script>
 
-<p>$P(\theta) \Rightarrow$ prior</p>
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+\vec{a} \cdot \vec{b} &=a_1 \cdot b_1 +a_2 \cdot b_2 + a_3 \cdot b_3\\
+&= |\vec{a}|  |\vec{b}|  cos(\vec{a},\vec{b})\\
+\end{align*} %]]></script>
 
-<p>$P(\theta \mid D) \Rightarrow$ posterior</p>
+<h3 id="vector-product叉乘向量积外积叉积矢积">Vector Product（叉乘，向量积，外积、叉积，矢积）</h3>
 
-<p>$P(D) \Rightarrow$ marginal likelihood</p>
+<script type="math/tex; mode=display">|\vec{a} \times \vec{b}| = |\vec{a}|  |\vec{b}|  sin(\vec{a},\vec{b})</script>
 
-<h3 id="maximum-likelihood-estimation-mle">Maximum Likelihood Estimation (MLE)</h3>
-<p>AKA:最大似然估计，likelihood AKA: 似然函数</p>
+<blockquote>
+  <p>其方向与$\vec{a} ,\vec{b}$的平面垂直，且遵循右手定则</p>
+</blockquote>
 
-<script type="math/tex; mode=display">P(D|\theta)=\prod\limits_{x_i \in D} p(x_i|\theta)</script>
+<h3 id="poin-wise-逐点">Poin-wise (逐点)</h3>
 
-<p>Apply log operation to avoid underflow</p>
-
-<script type="math/tex; mode=display">logP(D|\theta)=\sum\limits_{x_i \in D}log(p(x_i|\theta))</script>
-
-<script type="math/tex; mode=display">\theta=arg\space  MAX\space  logP(D|\theta)</script>
-
-<p>For instance,if <script type="math/tex">P(x \mid \theta) \sim N(u,\sigma^2)</script></p>
-
-<script type="math/tex; mode=display">\hat{u}=\frac{1}{|D|}\sum\limits_{x_i \in D} x_i</script>
-
-<script type="math/tex; mode=display">\hat{\sigma}^2=\frac{1}{|D|}\sum\limits_{x_i \in D}(x_i-\hat{u})(x_i-\hat{u})^T</script>
+<script type="math/tex; mode=display">\vec{a} \cdot \vec{b} =(a_1 \cdot b_1 ,a_2 \cdot b_2 , a_3 \cdot b_3)</script>
 
         </div>
 
         
           <div class="page-share">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmath%2Fmle%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
-  <a href="https://twitter.com/intent/tweet?text=Maximum+Likelihood+Estimation%20http%3A%2F%2Flocalhost%3A4000%2Fmath%2Fmle%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmath%2Fmle%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
-  <a href="https://reddit.com/submit?title=Maximum+Likelihood+Estimation&url=http%3A%2F%2Flocalhost%3A4000%2Fmath%2Fmle%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmath%2Fproducts%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Products%20http%3A%2F%2Flocalhost%3A4000%2Fmath%2Fproducts%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmath%2Fproducts%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=Products&url=http%3A%2F%2Flocalhost%3A4000%2Fmath%2Fproducts%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
 </div>
 
         
@@ -185,23 +180,15 @@
 
         <nav class="page-pagination" role="navigation">
   
-    <a class="page-previous" href="/linux/path/">
+    <a class="page-previous" href="/machine%20learning/deep%20learning/distributed-tensorflow/">
       <h4 class="page-pagination-label">Previous</h4>
       <span class="page-pagination-title">
-        <i class="fas fa-arrow-left"></i> PATH
+        <i class="fas fa-arrow-left"></i> Distributed Tensorflow
 
       </span>
     </a>
   
 
-  
-    <a class="page-next" href="/machine%20learning/pca/">
-      <h4 class="page-pagination-label">Next</h4>
-      <span class="page-pagination-title">
-        PCA
- <i class="fas fa-arrow-right"></i>
-      </span>
-    </a>
   
 </nav>
 

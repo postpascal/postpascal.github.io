@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-16T16:43:51+08:00</updated><id>http://localhost:4000/</id><title type="html">紫禁之巅</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">Distributed Tensorflow</title><link href="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" rel="alternate" type="text/html" title="Distributed Tensorflow" /><published>2018-04-02T00:00:00+08:00</published><updated>2018-04-02T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow</id><content type="html" xml:base="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/">&lt;h3 id=&quot;terminology&quot;&gt;Terminology&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-16T17:06:13+08:00</updated><id>http://localhost:4000/</id><title type="html">紫禁之巅</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">Products</title><link href="http://localhost:4000/math/products/" rel="alternate" type="text/html" title="Products" /><published>2018-04-16T00:00:00+08:00</published><updated>2018-04-16T00:00:00+08:00</updated><id>http://localhost:4000/math/products</id><content type="html" xml:base="http://localhost:4000/math/products/">&lt;h3 id=&quot;dot-product点积&quot;&gt;Dot Product(点积)&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{a}=[a_1,a_2,a_3]&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{b}=[b_1, b_2, b_3]&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+\vec{a} \cdot \vec{b} &amp;=a_1 \cdot b_1 +a_2 \cdot b_2 + a_3 \cdot b_3\\
+&amp;= |\vec{a}|  |\vec{b}|  cos(\vec{a},\vec{b})\\
+\end{align*} %]]&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;vector-product叉乘向量积外积叉积矢积&quot;&gt;Vector Product（叉乘，向量积，外积、叉积，矢积）&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;|\vec{a} \times \vec{b}| = |\vec{a}|  |\vec{b}|  sin(\vec{a},\vec{b})&lt;/script&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;其方向与$\vec{a} ,\vec{b}$的平面垂直，且遵循右手定则&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;poin-wise-逐点&quot;&gt;Poin-wise (逐点)&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{a} \cdot \vec{b} =(a_1 \cdot b_1 ,a_2 \cdot b_2 , a_3 \cdot b_3)&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="math" /><category term="linear algebra" /><summary type="html">Dot Product(点积)</summary></entry><entry><title type="html">Distributed Tensorflow</title><link href="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" rel="alternate" type="text/html" title="Distributed Tensorflow" /><published>2018-04-02T00:00:00+08:00</published><updated>2018-04-02T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow</id><content type="html" xml:base="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/">&lt;h3 id=&quot;terminology&quot;&gt;Terminology&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Cluster: A cluster is composed of one or more Tensorflow servers, called tasks.&lt;/li&gt;
   &lt;li&gt;Job: a group of tasks that have a common roal. For instance, parameters server, worker server.&lt;/li&gt;
@@ -285,7 +307,170 @@ At this point, they should do whatever it takes to turn their gripes into solid 
 &lt;h2 id=&quot;难点&quot;&gt;难点：&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;传统行业，比如养殖业，农业，从事这些行业的人大多文化水平不高，对他们的数据难以收集&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="AI" /><summary type="html">智能时代</summary></entry><entry><title type="html">Maximum Likelihood Estimation</title><link href="http://localhost:4000/math/mle/" rel="alternate" type="text/html" title="Maximum Likelihood Estimation" /><published>2017-02-01T00:00:00+08:00</published><updated>2017-02-01T00:00:00+08:00</updated><id>http://localhost:4000/math/mle</id><content type="html" xml:base="http://localhost:4000/math/mle/">&lt;h3 id=&quot;bayesian-rule&quot;&gt;Bayesian Rule:&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="AI" /><summary type="html">智能时代</summary></entry><entry><title type="html">PCA</title><link href="http://localhost:4000/machine%20learning/pca/" rel="alternate" type="text/html" title="PCA" /><published>2017-09-11T20:08:50+08:00</published><updated>2017-09-11T20:08:50+08:00</updated><id>http://localhost:4000/machine%20learning/pca</id><content type="html" xml:base="http://localhost:4000/machine%20learning/pca/">&lt;p&gt;&lt;a href=&quot;http://blog.codinglabs.org/articles/pca-tutorial.html&quot;&gt;Blog Source:&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;方差&quot;&gt;方差&lt;/h2&gt;
+&lt;p&gt;上文说到，我们希望投影后投影值尽可能分散，而这种分散程度，可以用数学上的方差来表述。此处，一个字段的方差可以看做是每个元素与字段均值的差的平方和的均值，即：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Var(a)=\frac{1}{m}\sum_{i=1}^m{(a_i-\mu)^2}&lt;/script&gt;
+
+&lt;p&gt;由于上面我们已经将每个字段的均值都化为0了，因此方差可以直接用每个元素的平方和除以元素个数表示：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Var(a)=\frac{1}{m}\sum_{i=1}^m{a_i^2}&lt;/script&gt;
+
+&lt;p&gt;于是上面的问题被形式化表述为：寻找一个一维基，使得所有数据变换为这个基上的坐标表示后，方差值最大。&lt;/p&gt;
+&lt;h2 id=&quot;协方差&quot;&gt;协方差&lt;/h2&gt;
+&lt;p&gt;对于上面二维降成一维的问题来说，找到那个使得方差最大的方向就可以了。不过对于更高维，还有一个问题需要解决。考虑三维降到二维问题。与之前相同，首先我们希望找到一个方向使得投影后方差最大，这样就完成了第一个方向的选择，继而我们选择第二个投影方向。&lt;/p&gt;
+
+&lt;p&gt;如果我们还是单纯只选择方差最大的方向，很明显，这个方向与第一个方向应该是“几乎重合在一起”，显然这样的维度是没有用的，因此，应该有其他约束条件。从直观上说，让两个字段尽可能表示更多的原始信息，我们是不希望它们之间存在（线性）相关性的，因为相关性意味着两个字段不是完全独立，必然存在重复表示的信息。&lt;/p&gt;
+
+&lt;p&gt;数学上可以用两个字段的协方差表示其相关性，由于已经让每个字段均值为0，则：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Cov(a,b)=\frac{1}{m}\sum_{i=1}^m{a_ib_i}&lt;/script&gt;
+
+&lt;p&gt;可以看到，在字段均值为0的情况下，两个字段的协方差简洁的表示为其内积除以元素数m。&lt;/p&gt;
+
+&lt;p&gt;当协方差为0时，表示两个字段完全独立。为了让协方差为0，我们选择第二个基时只能在与第一个基正交的方向上选择。因此最终选择的两个方向一定是正交的。&lt;/p&gt;
+
+&lt;p&gt;至此，我们得到了降维问题的优化目标：将一组N维向量降为K维（K大于0，小于N），其目标是选择K个单位（模为1）正交基，使得原始数据变换到这组基上后，各字段两两间协方差为0，而字段的方差则尽可能大（在正交的约束下，取最大的K个方差）。&lt;/p&gt;
+
+&lt;h2 id=&quot;协方差矩阵&quot;&gt;协方差矩阵&lt;/h2&gt;
+&lt;p&gt;上面我们导出了优化目标，但是这个目标似乎不能直接作为操作指南（或者说算法），因为它只说要什么，但根本没有说怎么做。所以我们要继续在数学上研究计算方案。&lt;/p&gt;
+
+&lt;p&gt;我们看到，最终要达到的目的与字段内方差及字段间协方差有密切关系。因此我们希望能将两者统一表示，仔细观察发现，两者均可以表示为内积的形式，而内积又与矩阵相乘密切相关。于是我们来了灵感：
+假设我们只有a和b两个字段，那么我们将它们按行组成矩阵X：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+X= \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_m \\ b_1 &amp; b_2 &amp; \cdots &amp; b_m \end{pmatrix} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;然后我们用X乘以X的转置，并乘上系数$1/m$：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\frac{1}{m}XX^\mathsf{T}=\begin{pmatrix} \frac{1}{m}\sum_{i=1}^m{a_i^2} &amp; \frac{1}{m}\sum_{i=1}^m{a_ib_i} \\ \frac{1}{m}\sum_{i=1}^m{a_ib_i} &amp; \frac{1}{m}\sum_{i=1}^m{b_i^2} \end{pmatrix} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;奇迹出现了！这个矩阵对角线上的两个元素分别是两个字段的方差，而其它元素是a和b的协方差。两者被统一到了一个矩阵的。&lt;/p&gt;
+
+&lt;p&gt;根据矩阵相乘的运算法则，这个结论很容易被推广到一般情况：&lt;/p&gt;
+
+&lt;p&gt;设我们有m个n维数据记录，将其按列排成n乘m的矩阵X，设&lt;script type=&quot;math/tex&quot;&gt;C=\frac{1}{m}XX^\mathsf{T}&lt;/script&gt;则C是一个对称矩阵，其对角线分别个各个字段的方差，而第i行j列和j行i列元素相同，表示i和j两个字段的协方差。&lt;/p&gt;
+
+&lt;p&gt;##协方差矩阵对角化
+根据上述推导，我们发现要达到优化目前，等价于将协方差矩阵对角化：即除对角线外的其它元素化为0，并且在对角线上将元素按大小从上到下排列，这样我们就达到了优化目的。这样说可能还不是很明晰，我们进一步看下原矩阵与基变换后矩阵协方差矩阵的关系：&lt;/p&gt;
+
+&lt;p&gt;设原始数据矩阵X对应的协方差矩阵为C，而P是一组基按行组成的矩阵，设Y=PX，则Y为X对P做基变换后的数据。设Y的协方差矩阵为D，我们推导一下D与C的关系：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{array}{l l l} D &amp; = &amp; \frac{1}{m}YY^\mathsf{T} \\ &amp; = &amp; \frac{1}{m}(PX)(PX)^\mathsf{T} \\ &amp; = &amp; \frac{1}{m}PXX^\mathsf{T}P^\mathsf{T} \\ &amp; = &amp; P(\frac{1}{m}XX^\mathsf{T})P^\mathsf{T} \\ &amp; = &amp; PCP^\mathsf{T} \end{array} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;现在事情很明白了！我们要找的P不是别的，而是能让原始协方差矩阵对角化的P。换句话说，优化目标变成了寻找一个矩阵P，满足&lt;script type=&quot;math/tex&quot;&gt;PCP^\mathsf{T}&lt;/script&gt;是一个对角矩阵，并且对角元素按从大到小依次排列，那么P的前K行就是要寻找的基，用P的前K行组成的矩阵乘以X就使得X从N维降到了K维并满足上述优化条件。&lt;/p&gt;
+
+&lt;p&gt;至此，我们离“发明”PCA还有仅一步之遥！&lt;/p&gt;
+
+&lt;p&gt;现在所有焦点都聚焦在了协方差矩阵对角化问题上，有时，我们真应该感谢数学家的先行，因为矩阵对角化在线性代数领域已经属于被玩烂了的东西，所以这在数学上根本不是问题。&lt;/p&gt;
+
+&lt;p&gt;由上文知道，协方差矩阵C是一个是对称矩阵，在线性代数上，实对称矩阵有一系列非常好的性质：&lt;/p&gt;
+
+&lt;p&gt;1）实对称矩阵不同特征值对应的特征向量必然正交。&lt;/p&gt;
+
+&lt;p&gt;2）设特征向量&lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt;重数为r，则必然存在r个线性无关的特征向量对应于\lambda，因此可以将这r个特征向量单位正交化。&lt;/p&gt;
+
+&lt;p&gt;由上面两条可知，一个n行n列的实对称矩阵一定可以找到n个单位正交特征向量，设这n个特征向量为&lt;script type=&quot;math/tex&quot;&gt;e_1,e_2,\cdots,e_n&lt;/script&gt;，我们将其按列组成矩阵：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+E=\begin{pmatrix} e_1 &amp; e_2 &amp; \cdots &amp; e_n \end{pmatrix} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;则对协方差矩阵C有如下结论：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+E^\mathsf{T}CE=\Lambda=\begin{pmatrix} \lambda_1 &amp; &amp; &amp; \\ &amp; \lambda_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \lambda_n \end{pmatrix} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;其中&lt;script type=&quot;math/tex&quot;&gt;\Lambda&lt;/script&gt;为对角矩阵，其对角元素为各特征向量对应的特征值（可能有重复）。&lt;/p&gt;
+
+&lt;p&gt;以上结论不再给出严格的数学证明，对证明感兴趣的朋友可以参考线性代数书籍关于“实对称矩阵对角化”的内容。&lt;/p&gt;
+
+&lt;p&gt;到这里，我们发现我们已经找到了需要的矩阵P：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P=E^\mathsf{T}&lt;/script&gt;
+
+&lt;p&gt;P是协方差矩阵的特征向量单位化后按行排列出的矩阵，其中每一行都是C的一个特征向量。如果设P按照&lt;script type=&quot;math/tex&quot;&gt;\Lambda&lt;/script&gt;中特征值的从大到小，将特征向量从上到下排列，则用P的前K行组成的矩阵乘以原始数据矩阵X，就得到了我们需要的降维后的数据矩阵Y。&lt;/p&gt;
+
+&lt;p&gt;至此我们完成了整个PCA的数学原理讨论。在下面的一节，我们将给出PCA的一个实例。&lt;/p&gt;
+
+&lt;h1 id=&quot;算法及实例&quot;&gt;算法及实例&lt;/h1&gt;
+&lt;p&gt;为了巩固上面的理论，我们在这一节给出一个具体的PCA实例。&lt;/p&gt;
+
+&lt;h2 id=&quot;pca算法&quot;&gt;PCA算法&lt;/h2&gt;
+&lt;p&gt;总结一下PCA的算法步骤：&lt;/p&gt;
+
+&lt;p&gt;设有m条n维数据。&lt;/p&gt;
+
+&lt;p&gt;1）将原始数据按列组成n行m列矩阵X&lt;/p&gt;
+
+&lt;p&gt;2）将X的每一行（代表一个属性字段）进行零均值化，即减去这一行的均值&lt;/p&gt;
+
+&lt;p&gt;3）求出协方差矩阵&lt;script type=&quot;math/tex&quot;&gt;C=\frac{1}{m}XX^\mathsf{T}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;4）求出协方差矩阵的特征值及对应的特征向量&lt;/p&gt;
+
+&lt;p&gt;5）将特征向量按对应特征值大小从上到下按行排列成矩阵，取前k行组成矩阵P&lt;/p&gt;
+
+&lt;p&gt;6）Y=PX即为降维到k维后的数据&lt;/p&gt;
+
+&lt;h2 id=&quot;实例&quot;&gt;实例&lt;/h2&gt;
+&lt;p&gt;这里以上文提到的&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{pmatrix} -1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\ -2 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;为例，我们用PCA方法将这组二维数据其降到一维。&lt;/p&gt;
+
+&lt;p&gt;因为这个矩阵的每行已经是零均值，这里我们直接求协方差矩阵：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+C=\frac{1}{5}\begin{pmatrix} -1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\ -2 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \end{pmatrix}\begin{pmatrix} -1 &amp; -2 \\ -1 &amp; 0 \\ 0 &amp; 0 \\ 2 &amp; 1 \\ 0 &amp; 1 \end{pmatrix}=\begin{pmatrix} \frac{6}{5} &amp; \frac{4}{5} \\ \frac{4}{5} &amp; \frac{6}{5} \end{pmatrix} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;然后求其特征值和特征向量，具体求解方法不再详述，可以参考相关资料。求解后特征值为：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda_1=2,\lambda_2=2/5&lt;/script&gt;
+
+&lt;p&gt;其对应的特征向量分别是：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;c_1\begin{pmatrix} 1 \\ 1 \end{pmatrix},c_2\begin{pmatrix} -1 \\ 1 \end{pmatrix}&lt;/script&gt;
+
+&lt;p&gt;其中对应的特征向量分别是一个通解，&lt;script type=&quot;math/tex&quot;&gt;c_1和c_2&lt;/script&gt;可取任意实数。那么标准化后的特征向量为：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{pmatrix} 1/\sqrt{2} \\ 1/\sqrt{2} \end{pmatrix},\begin{pmatrix} -1/\sqrt{2} \\ 1/\sqrt{2} \end{pmatrix}&lt;/script&gt;
+
+&lt;p&gt;因此我们的矩阵P是：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+P=\begin{pmatrix} 1/\sqrt{2} &amp; 1/\sqrt{2} \\ -1/\sqrt{2} &amp; 1/\sqrt{2} \end{pmatrix} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;可以验证协方差矩阵C的对角化：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+PCP^\mathsf{T}=\begin{pmatrix} 1/\sqrt{2} &amp; 1/\sqrt{2} \\ -1/\sqrt{2} &amp; 1/\sqrt{2} \end{pmatrix}\begin{pmatrix} 6/5 &amp; 4/5 \\ 4/5 &amp; 6/5 \end{pmatrix}\begin{pmatrix} 1/\sqrt{2} &amp; -1/\sqrt{2} \\ 1/\sqrt{2} &amp; 1/\sqrt{2} \end{pmatrix}=\begin{pmatrix} 2 &amp; 0 \\ 0 &amp; 2/5 \end{pmatrix} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;最后我们用P的第一行乘以数据矩阵，就得到了降维后的表示：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+Y=\begin{pmatrix} 1/\sqrt{2} &amp; 1/\sqrt{2} \end{pmatrix}\begin{pmatrix} -1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\ -2 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \end{pmatrix}=\begin{pmatrix} -3/\sqrt{2} &amp; -1/\sqrt{2} &amp; 0 &amp; 3/\sqrt{2} &amp; -1/\sqrt{2} \end{pmatrix} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;降维投影结果如下图:&lt;/p&gt;
+
+&lt;figure style=&quot;width: 250px&quot; class=&quot;align-center&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/pca.png&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;PCA image.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;进一步讨论&quot;&gt;进一步讨论&lt;/h2&gt;
+&lt;p&gt;根据上面对PCA的数学原理的解释，我们可以了解到一些PCA的能力和限制。PCA本质上是将方差最大的方向作为主要特征，并且在各个正交方向上将数据“离相关”，也就是让它们在不同正交方向上没有相关性。&lt;/p&gt;
+
+&lt;p&gt;因此，PCA也存在一些限制，例如它可以很好的解除线性相关，但是对于高阶相关性就没有办法了，对于存在高阶相关性的数据，可以考虑Kernel PCA，通过Kernel函数将非线性相关转为线性相关，关于这点就不展开讨论了。另外，PCA假设数据各主特征是分布在正交方向上，如果在非正交方向上存在几个方差较大的方向，PCA的效果就大打折扣了。&lt;/p&gt;
+
+&lt;p&gt;最后需要说明的是，PCA是一种无参数技术，也就是说面对同样的数据，如果不考虑清洗，谁来做结果都一样，没有主观参数的介入，所以PCA便于通用实现，但是本身无法个性化的优化。&lt;/p&gt;
+
+&lt;p&gt;希望这篇文章能帮助朋友们了解PCA的数学理论基础和实现原理，借此了解PCA的适用场景和限制，从而更好的使用这个算法。&lt;/p&gt;</content><author><name>Zhang Keke</name></author><category term="math" /><category term="PCA" /><category term="dimension reduction" /><summary type="html">Blog Source:</summary></entry><entry><title type="html">Maximum Likelihood Estimation</title><link href="http://localhost:4000/math/mle/" rel="alternate" type="text/html" title="Maximum Likelihood Estimation" /><published>2017-02-01T00:00:00+08:00</published><updated>2017-02-01T00:00:00+08:00</updated><id>http://localhost:4000/math/mle</id><content type="html" xml:base="http://localhost:4000/math/mle/">&lt;h3 id=&quot;bayesian-rule&quot;&gt;Bayesian Rule:&lt;/h3&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;P(\theta|D)=\frac{P(D|\theta)P(\theta)}{P(D)}&lt;/script&gt;
 
