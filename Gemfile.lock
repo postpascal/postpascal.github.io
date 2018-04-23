@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/eventmachine/eventmachine.git
+  revision: 8d645e1f959ba61aadeb5179ed7673f3bded7dd9
+  branch: master
+  specs:
+    eventmachine (1.2.5)
+
 PATH
   remote: .
   specs:
@@ -26,7 +33,6 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    eventmachine (1.2.5)
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.23)
@@ -112,6 +118,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.12)
+  eventmachine!
   jekyll-theme-so-simple!
   rake (~> 10.0)
 
