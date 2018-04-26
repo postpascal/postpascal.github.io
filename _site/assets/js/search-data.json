@@ -39,6 +39,11 @@ var store = [{
         "tags": ["math","linear algebra"],
         "url": "http://localhost:4000/math/products/"
       },{
+        "title": "Reading Weekly",
+        "excerpt":"            Date      Title      Author      Recap                  2018-04-26      Lessons from My First Two Years of AI Research      Tom Silver      No      Title: Lessons from My First Two Years of AI Research Date: 2018-04-26 Author: Tom Silver Recap:   ds  ds","categories": ["reading list"],
+        "tags": ["weekly"],
+        "url": "http://localhost:4000/reading%20list/readlist/"
+      },{
         "title": "少年",
         "excerpt":"你曾是少年\t\t\t\t\t\t\tYour browser does not support the audio element.\t\t\t你曾是少年，倔强勇敢不改变；你曾是少年，拌嘴吐槽也争先；你曾是少年，啤酒饺子鸡蛋面；你曾是少年，熬夜看书少睡眠；你曾是少年，周易老庄百家言；你曾是少年，江天万里不挂念；你曾是少年，物化生数都等闲；你曾是少年，追云逐日不自谦；你曾是少年，锦绣河山誓踏遍；你曾是少年，怒马扬尘花看厌；你曾是少年，转身告别不留恋。乘风破浪斩敌前，男儿至死是少年。  ","categories": [],
         "tags": [],

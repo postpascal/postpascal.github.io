@@ -33,6 +33,10 @@
 <lastmod>2018-04-16T00:00:00+08:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/reading%20list/readlist/</loc>
+<lastmod>2018-04-25T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/recipes/shao-nian/</loc>
 <lastmod>2016-12-01T00:00:00+08:00</lastmod>
 </url>
@@ -59,10 +63,10 @@
 </url>
 <url>
 <loc>http://localhost:4000/ukmap/</loc>
-<lastmod>2018-04-23T23:57:09+08:00</lastmod>
+<lastmod>2018-03-29T22:18:01+08:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/ukmap/ne_10m_admin_0_map_subunits/ne_10m_admin_0_map_subunits.README.html</loc>
-<lastmod>2018-04-23T23:57:09+08:00</lastmod>
+<lastmod>2018-03-29T15:33:01+08:00</lastmod>
 </url>
 </urlset>
