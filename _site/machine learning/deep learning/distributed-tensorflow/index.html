@@ -21,15 +21,15 @@
 <meta property="og:title" content="Distributed Tensorflow" />
 <meta name="author" content="Zhang Keke" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Terminology Cluster: A cluster is composed of one or more Tensorflow servers, called tasks. Job: a group of tasks that have a common roal. For instance, parameters server, worker server. Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks." />
-<meta property="og:description" content="Terminology Cluster: A cluster is composed of one or more Tensorflow servers, called tasks. Job: a group of tasks that have a common roal. For instance, parameters server, worker server. Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks." />
+<meta name="description" content="Table of Contents" />
+<meta property="og:description" content="Table of Contents" />
 <link rel="canonical" href="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" />
 <meta property="og:url" content="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" />
 <meta property="og:site_name" content="紫禁之巅" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-04-02T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"Terminology Cluster: A cluster is composed of one or more Tensorflow servers, called tasks. Job: a group of tasks that have a common roal. For instance, parameters server, worker server. Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.","author":{"@type":"Person","name":"Zhang Keke"},"@type":"BlogPosting","url":"http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/tree1.svg"},"name":"Zhang Keke"},"headline":"Distributed Tensorflow","dateModified":"2018-04-02T00:00:00+08:00","datePublished":"2018-04-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/"},"@context":"http://schema.org"}</script>
+{"description":"Table of Contents","author":{"@type":"Person","name":"Zhang Keke"},"@type":"BlogPosting","url":"http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/tree1.svg"},"name":"Zhang Keke"},"headline":"Distributed Tensorflow","dateModified":"2018-04-02T00:00:00+08:00","datePublished":"2018-04-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -113,7 +113,7 @@
             <a class="u-url" rel="me" href="https://weibo.com/u/2858024844?refer_flag=1001030101_"><i class="fab fa-weibo fa-lg" title="Weibo"></i></a>
           </li></ul>
 
-<span class="read-time">2 min read</span>
+<span class="read-time">3 min read</span>
 
     <time class="page-date dt-published" datetime="2018-04-02T00:00:00+08:00"><a class="u-url" href="">April 2, 2018</a>
 </time>
@@ -137,7 +137,33 @@
 
       <div class="page-content">
         <div class="e-content">
-          <h3 id="terminology">Terminology</h3>
+          <div id="entry-table-of-contents" class="toc-wrapper">
+  <h2 id="toc-toggle" class="no_toc">
+  Table of Contents <i class="toc-toggle-icon fas fa-chevron-down"></i>
+</h2>
+<ol id="markdown-toc">
+  <li><a href="#terminology" id="markdown-toc-terminology">Terminology</a></li>
+  <li><a href="#multiple-devices-on-a-single-machine" id="markdown-toc-multiple-devices-on-a-single-machine">Multiple Devices on a Single Machine</a>    <ol>
+      <li><a href="#dependencies" id="markdown-toc-dependencies">Dependencies:</a></li>
+      <li><a href="#managing-gpu-ram" id="markdown-toc-managing-gpu-ram">Managing GPU RAM</a></li>
+      <li><a href="#placing-operations-on-devices" id="markdown-toc-placing-operations-on-devices">Placing operations on Devices</a></li>
+    </ol>
+  </li>
+  <li><a href="#multiple-devices-across-multiple-servers" id="markdown-toc-multiple-devices-across-multiple-servers">Multiple Devices Across Multiple Servers</a></li>
+  <li><a href="#advantages" id="markdown-toc-advantages">Advantages:</a></li>
+  <li><a href="#parallelizing-neural-network-on-a--tensorflow-cluster" id="markdown-toc-parallelizing-neural-network-on-a--tensorflow-cluster">Parallelizing Neural Network on a  Tensorflow Cluster</a>    <ol>
+      <li><a href="#one-neural-network-per-device" id="markdown-toc-one-neural-network-per-device">One Neural Network per device</a></li>
+      <li><a href="#in-graph-versus-between-graph-replication-ensemble" id="markdown-toc-in-graph-versus-between-graph-replication-ensemble">In-Graph Versus Between-Graph Replication (ensemble)</a></li>
+    </ol>
+  </li>
+  <li><a href="#model-parallelism" id="markdown-toc-model-parallelism">Model Parallelism</a></li>
+  <li><a href="#data-parallelism" id="markdown-toc-data-parallelism">Data Parallelism</a></li>
+  <li><a href="#reference" id="markdown-toc-reference">Reference:</a></li>
+</ol>
+
+</div>
+
+<h3 id="terminology">Terminology</h3>
 <ul>
   <li>Cluster: A cluster is composed of one or more Tensorflow servers, called tasks.</li>
   <li>Job: a group of tasks that have a common roal. For instance, parameters server, worker server.</li>
