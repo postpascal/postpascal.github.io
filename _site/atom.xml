@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-26T14:46:01+08:00</updated><id>http://localhost:4000/</id><title type="html">紫禁之巅</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">Layout: Post with Table Of Contents</title><link href="http://localhost:4000/layout/tt/" rel="alternate" type="text/html" title="Layout: Post with Table Of Contents" /><published>2018-04-25T00:00:00+08:00</published><updated>2018-04-25T00:00:00+08:00</updated><id>http://localhost:4000/layout/tt</id><content type="html" xml:base="http://localhost:4000/layout/tt/">&lt;p&gt;Enable table of contents on post or page by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;{% include toc %}&lt;/code&gt; where you’d like it to appear.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-28T10:02:26+08:00</updated><id>http://localhost:4000/</id><title type="html">紫禁之巅</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">Layout: Post with Table Of Contents</title><link href="http://localhost:4000/layout/tt/" rel="alternate" type="text/html" title="Layout: Post with Table Of Contents" /><published>2018-04-25T00:00:00+08:00</published><updated>2018-04-25T00:00:00+08:00</updated><id>http://localhost:4000/layout/tt</id><content type="html" xml:base="http://localhost:4000/layout/tt/">&lt;p&gt;Enable table of contents on post or page by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;{% include toc %}&lt;/code&gt; where you’d like it to appear.&lt;/p&gt;
 
 &lt;div id=&quot;entry-table-of-contents&quot; class=&quot;toc-wrapper&quot;&gt;
   &lt;h2 id=&quot;toc-toggle&quot; class=&quot;no_toc&quot;&gt;
@@ -186,7 +186,16 @@
 
 &lt;h3 id=&quot;poin-wise-逐点&quot;&gt;Poin-wise (逐点)&lt;/h3&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{a} \cdot \vec{b} =(a_1 \cdot b_1 ,a_2 \cdot b_2 , a_3 \cdot b_3)&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="math" /><category term="linear algebra" /><summary type="html">Dot Product(点积)</summary></entry><entry><title type="html">Distributed Tensorflow</title><link href="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" rel="alternate" type="text/html" title="Distributed Tensorflow" /><published>2018-04-02T00:00:00+08:00</published><updated>2018-04-02T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow</id><content type="html" xml:base="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/">&lt;div id=&quot;entry-table-of-contents&quot; class=&quot;toc-wrapper&quot;&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{a} \cdot \vec{b} =(a_1 \cdot b_1 ,a_2 \cdot b_2 , a_3 \cdot b_3)&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="math" /><category term="linear algebra" /><summary type="html">Dot Product(点积)</summary></entry><entry><title type="html">Distributed Tensorflow</title><link href="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" rel="alternate" type="text/html" title="Distributed Tensorflow" /><published>2018-04-02T00:00:00+08:00</published><updated>2018-04-02T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow</id><content type="html" xml:base="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/">&lt;h3 id=&quot;terminology&quot;&gt;Terminology&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cluster: A cluster is composed of one or more Tensorflow servers, called tasks.&lt;/li&gt;
+  &lt;li&gt;Job: a group of tasks that have a common roal. For instance, parameters server, worker server.&lt;/li&gt;
+  &lt;li&gt;Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;div id=&quot;entry-table-of-contents&quot; class=&quot;toc-wrapper&quot;&gt;
   &lt;h2 id=&quot;toc-toggle&quot; class=&quot;no_toc&quot;&gt;
   Table of Contents &lt;i class=&quot;toc-toggle-icon fas fa-chevron-down&quot;&gt;&lt;/i&gt;
 &lt;/h2&gt;
@@ -211,15 +220,6 @@
 &lt;/ol&gt;
 
 &lt;/div&gt;
-
-&lt;h3 id=&quot;terminology&quot;&gt;Terminology&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Cluster: A cluster is composed of one or more Tensorflow servers, called tasks.&lt;/li&gt;
-  &lt;li&gt;Job: a group of tasks that have a common roal. For instance, parameters server, worker server.&lt;/li&gt;
-  &lt;li&gt;Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
 
 &lt;h3 id=&quot;multiple-devices-on-a-single-machine&quot;&gt;Multiple Devices on a Single Machine&lt;/h3&gt;
 &lt;h4 id=&quot;dependencies&quot;&gt;Dependencies:&lt;/h4&gt;
@@ -362,7 +362,7 @@ session = tf.Session(config=config)
   &lt;li&gt;&lt;a href=&quot;https://g.co/kgs/dHRoaa&quot;&gt;Hands-on Machine Learning with Scikit_Learn &amp;amp; Tensorflow&lt;/a&gt;: Chapter 12, Distributing Tensorflow Across Devices and Server&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;</content><author><name>Zhang Keke</name></author><category term="Tensorflow" /><category term="Distribution" /><summary type="html">Table of Contents</summary></entry><entry><title type="html">Machine Learning Tips</title><link href="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/" rel="alternate" type="text/html" title="Machine Learning Tips" /><published>2018-02-23T00:00:00+08:00</published><updated>2018-02-23T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips</id><content type="html" xml:base="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/">&lt;p&gt;Recap of Martin Zinkevich’s blog 
+&lt;hr /&gt;</content><author><name>Zhang Keke</name></author><category term="Tensorflow" /><category term="Distribution" /><summary type="html">Terminology Cluster: A cluster is composed of one or more Tensorflow servers, called tasks. Job: a group of tasks that have a common roal. For instance, parameters server, worker server. Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.</summary></entry><entry><title type="html">Machine Learning Tips</title><link href="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/" rel="alternate" type="text/html" title="Machine Learning Tips" /><published>2018-02-23T00:00:00+08:00</published><updated>2018-02-23T00:00:00+08:00</updated><id>http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips</id><content type="html" xml:base="http://localhost:4000/machine%20learning/reading/recap/Machine-Learning-tips/">&lt;p&gt;Recap of Martin Zinkevich’s blog 
 &lt;a href=&quot;http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf&quot;&gt;Best Practices for ML Engineering&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;

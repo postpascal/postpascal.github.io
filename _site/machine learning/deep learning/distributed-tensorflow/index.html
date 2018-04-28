@@ -21,15 +21,15 @@
 <meta property="og:title" content="Distributed Tensorflow" />
 <meta name="author" content="Zhang Keke" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Table of Contents" />
-<meta property="og:description" content="Table of Contents" />
+<meta name="description" content="Terminology Cluster: A cluster is composed of one or more Tensorflow servers, called tasks. Job: a group of tasks that have a common roal. For instance, parameters server, worker server. Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks." />
+<meta property="og:description" content="Terminology Cluster: A cluster is composed of one or more Tensorflow servers, called tasks. Job: a group of tasks that have a common roal. For instance, parameters server, worker server. Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks." />
 <link rel="canonical" href="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" />
 <meta property="og:url" content="http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/" />
 <meta property="og:site_name" content="紫禁之巅" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-04-02T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"Table of Contents","author":{"@type":"Person","name":"Zhang Keke"},"@type":"BlogPosting","url":"http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/tree1.svg"},"name":"Zhang Keke"},"headline":"Distributed Tensorflow","dateModified":"2018-04-02T00:00:00+08:00","datePublished":"2018-04-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/"},"@context":"http://schema.org"}</script>
+{"description":"Terminology Cluster: A cluster is composed of one or more Tensorflow servers, called tasks. Job: a group of tasks that have a common roal. For instance, parameters server, worker server. Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.","author":{"@type":"Person","name":"Zhang Keke"},"@type":"BlogPosting","url":"http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/tree1.svg"},"name":"Zhang Keke"},"headline":"Distributed Tensorflow","dateModified":"2018-04-02T00:00:00+08:00","datePublished":"2018-04-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/machine%20learning/deep%20learning/distributed-tensorflow/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -137,7 +137,16 @@
 
       <div class="page-content">
         <div class="e-content">
-          <div id="entry-table-of-contents" class="toc-wrapper">
+          <h3 id="terminology">Terminology</h3>
+<ul>
+  <li>Cluster: A cluster is composed of one or more Tensorflow servers, called tasks.</li>
+  <li>Job: a group of tasks that have a common roal. For instance, parameters server, worker server.</li>
+  <li>Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.</li>
+</ul>
+
+<hr />
+
+<div id="entry-table-of-contents" class="toc-wrapper">
   <h2 id="toc-toggle" class="no_toc">
   Table of Contents <i class="toc-toggle-icon fas fa-chevron-down"></i>
 </h2>
@@ -162,15 +171,6 @@
 </ol>
 
 </div>
-
-<h3 id="terminology">Terminology</h3>
-<ul>
-  <li>Cluster: A cluster is composed of one or more Tensorflow servers, called tasks.</li>
-  <li>Job: a group of tasks that have a common roal. For instance, parameters server, worker server.</li>
-  <li>Task: A task corresponds to a specific TensorFlow server, and typically corresponds to a single process. A task belongs to a particular “job” and is identified by its index within that job’s list of tasks.</li>
-</ul>
-
-<hr />
 
 <h3 id="multiple-devices-on-a-single-machine">Multiple Devices on a Single Machine</h3>
 <h4 id="dependencies">Dependencies:</h4>

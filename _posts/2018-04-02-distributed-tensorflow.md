@@ -10,7 +10,7 @@ tags:
   - Distribution
 ---
 
-{% include toc %}
+
 
 ### Terminology
 * Cluster: A cluster is composed of one or more Tensorflow servers, called tasks.
@@ -19,6 +19,7 @@ tags:
 
 ___
 
+{% include toc %}
 
 ### Multiple Devices on a Single Machine
 #### Dependencies:
