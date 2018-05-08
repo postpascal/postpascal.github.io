@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-28T10:02:26+08:00</updated><id>http://localhost:4000/</id><title type="html">紫禁之巅</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">Layout: Post with Table Of Contents</title><link href="http://localhost:4000/layout/tt/" rel="alternate" type="text/html" title="Layout: Post with Table Of Contents" /><published>2018-04-25T00:00:00+08:00</published><updated>2018-04-25T00:00:00+08:00</updated><id>http://localhost:4000/layout/tt</id><content type="html" xml:base="http://localhost:4000/layout/tt/">&lt;p&gt;Enable table of contents on post or page by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;{% include toc %}&lt;/code&gt; where you’d like it to appear.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-08T18:36:49+08:00</updated><id>http://localhost:4000/</id><title type="html">无何有之乡 广袤之野</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">Connect server with spawn and expect</title><link href="http://localhost:4000/tools/ssh-connect/" rel="alternate" type="text/html" title="Connect server with spawn and expect" /><published>2018-05-08T00:00:00+08:00</published><updated>2018-05-08T00:00:00+08:00</updated><id>http://localhost:4000/tools/ssh-connect</id><content type="html" xml:base="http://localhost:4000/tools/ssh-connect/">&lt;p&gt;&lt;a href=&quot;https://www.thegeekstuff.com/2010/10/expect-examples&quot;&gt;expect spawn and send&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/expect -f&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#set timeout 20&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;sp YourSudoPassword
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;passwd UserPassword
+
+&lt;span class=&quot;c&quot;&gt;# sudo is not always necessary&lt;/span&gt;
+
+spawn &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;ssh user@ip
+
+expect &lt;span class=&quot;s2&quot;&gt;&quot;Password:&quot;&lt;/span&gt;
+send &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sp&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+expect &lt;span class=&quot;s2&quot;&gt;&quot;some stuff&quot;&lt;/span&gt;
+send &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$passwd&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+interact
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;spawn: run commands&lt;/li&gt;
+  &lt;li&gt;expect: wait for specify pattern&lt;/li&gt;
+  &lt;li&gt;send: to send the strings to the process&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="ssh" /><category term="spawn" /><category term="server" /><summary type="html">expect spawn and send</summary></entry><entry><title type="html">Use jupyter on remote server</title><link href="http://localhost:4000/tools/remote-jupyter/" rel="alternate" type="text/html" title="Use jupyter on remote server" /><published>2018-05-08T00:00:00+08:00</published><updated>2018-05-08T00:00:00+08:00</updated><id>http://localhost:4000/tools/remote-jupyter</id><content type="html" xml:base="http://localhost:4000/tools/remote-jupyter/">&lt;p&gt;If you want to use jupyter on remote server, this blog might be useful.&lt;/p&gt;
+
+&lt;p&gt;Step1:
+Run jupyter without browser on  remote server:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter notebook &lt;span class=&quot;nt&quot;&gt;--no-browser&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--port&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8888
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Step2:
+Bind local port to remote server:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh &lt;span class=&quot;nt&quot;&gt;-N&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; localhost:8888:ip:8888 user@ip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Step3:
+Open browser on you local machine and direct to &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:8888&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To Stop Local Process:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ps aux|grep jupyter
+
+&lt;span class=&quot;nb&quot;&gt;kill &lt;/span&gt;pid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Zhang Keke</name></author><category term="jupyter" /><summary type="html">If you want to use jupyter on remote server, this blog might be useful.</summary></entry><entry><title type="html">Layout: Post with Table Of Contents</title><link href="http://localhost:4000/layout/tt/" rel="alternate" type="text/html" title="Layout: Post with Table Of Contents" /><published>2018-04-25T00:00:00+08:00</published><updated>2018-04-25T00:00:00+08:00</updated><id>http://localhost:4000/layout/tt</id><content type="html" xml:base="http://localhost:4000/layout/tt/">&lt;p&gt;Enable table of contents on post or page by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;{% include toc %}&lt;/code&gt; where you’d like it to appear.&lt;/p&gt;
 
 &lt;div id=&quot;entry-table-of-contents&quot; class=&quot;toc-wrapper&quot;&gt;
   &lt;h2 id=&quot;toc-toggle&quot; class=&quot;no_toc&quot;&gt;
@@ -718,69 +764,4 @@ Y=\begin{pmatrix} 1/\sqrt{2} &amp; 1/\sqrt{2} \end{pmatrix}\begin{pmatrix} -1 &a
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{u}=\frac{1}{|D|}\sum\limits_{x_i \in D} x_i&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{\sigma}^2=\frac{1}{|D|}\sum\limits_{x_i \in D}(x_i-\hat{u})(x_i-\hat{u})^T&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="MLE" /><summary type="html">Table of Contents</summary></entry><entry><title type="html">PATH</title><link href="http://localhost:4000/linux/path/" rel="alternate" type="text/html" title="PATH" /><published>2015-09-10T00:00:00+08:00</published><updated>2015-09-10T00:00:00+08:00</updated><id>http://localhost:4000/linux/path</id><content type="html" xml:base="http://localhost:4000/linux/path/">&lt;div id=&quot;entry-table-of-contents&quot; class=&quot;toc-wrapper&quot;&gt;
-  &lt;h2 id=&quot;toc-toggle&quot; class=&quot;no_toc&quot;&gt;
-  Table of Contents &lt;i class=&quot;toc-toggle-icon fas fa-chevron-down&quot;&gt;&lt;/i&gt;
-&lt;/h2&gt;
-&lt;ol id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#how-to-add-commands-to-path-in-linux-or-mac&quot; id=&quot;markdown-toc-how-to-add-commands-to-path-in-linux-or-mac&quot;&gt;How to add commands to $PATH in Linux or Mac?&lt;/a&gt;    &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;#what-is-path&quot; id=&quot;markdown-toc-what-is-path&quot;&gt;What is PATH?&lt;/a&gt;        &lt;ol&gt;
-          &lt;li&gt;&lt;a href=&quot;#option1set-path-for-your-current-shell-session&quot; id=&quot;markdown-toc-option1set-path-for-your-current-shell-session&quot;&gt;Option1:Set PATH for your current shell session&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#option2change-your-path-permanently&quot; id=&quot;markdown-toc-option2change-your-path-permanently&quot;&gt;Option2:Change your PATH permanently&lt;/a&gt;&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;/div&gt;
-
-&lt;h2 id=&quot;how-to-add-commands-to-path-in-linux-or-mac&quot;&gt;How to add commands to $PATH in Linux or Mac?&lt;/h2&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;what-is-path&quot;&gt;What is PATH?&lt;/h3&gt;
-
-&lt;p&gt;PATH is a variable in $ \star$nix system which tells the command path&lt;/p&gt;
-
-&lt;h4 id=&quot;option1set-path-for-your-current-shell-session&quot;&gt;Option1:Set PATH for your current shell session&lt;/h4&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/path/to/your/directory
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Done&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;option2change-your-path-permanently&quot;&gt;Option2:Change your PATH permanently&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Edit your .bash_profile(if you ues Bash) or .zshrc( if using zsh)&lt;/li&gt;
-  &lt;li&gt;add path at the end of the file&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/path/to/your/directory
-OR
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/path/to/your/directory:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Active your changes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; .bash_profile
-OR
-&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; .zshrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Done&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="path" /><summary type="html">Table of Contents</summary></entry><entry><title type="html">MathJax test Fourier Transform</title><link href="http://localhost:4000/math/test/" rel="alternate" type="text/html" title="MathJax test Fourier Transform" /><published>2015-09-01T00:00:00+08:00</published><updated>2015-09-01T00:00:00+08:00</updated><id>http://localhost:4000/math/test</id><content type="html" xml:base="http://localhost:4000/math/test/">&lt;p&gt;Fourier Transform:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;F(\omega)=\int_{-\infty}^{+\infty}f(\tau)e^{-j\omega\tau}d\tau&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;F(\omega)=\mathscr{F}[f(t)]&lt;/script&gt;
-
-&lt;p&gt;Inverse Fourier Transform:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}F(\omega)e^{j\omega t}d\omega&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(t)=\mathscr{F}^{-1}[F(\omega)]&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="Fourier Transform" /><summary type="html">Fourier Transform:</summary></entry></feed>
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat{\sigma}^2=\frac{1}{|D|}\sum\limits_{x_i \in D}(x_i-\hat{u})(x_i-\hat{u})^T&lt;/script&gt;</content><author><name>Zhang Keke</name></author><category term="MLE" /><summary type="html">Table of Contents</summary></entry></feed>

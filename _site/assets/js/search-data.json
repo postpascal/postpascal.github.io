@@ -1,4 +1,9 @@
 var store = [{
+        "title": "Myself",
+        "excerpt":"我 一个热爱历史，人文的工程师（💻🐒）。想要探索更多的世界和自己，记下美好的事物📸   古典武侠爱好者，喜欢金庸，古龙，尤其是古龙。  喜欢春秋战国时期的诸子百家思想，尤爱庄子，周易。  喜欢三国演义，看过最多遍的书了，8遍左右，不过比起主席的32遍还是差太远了🤪  铁杆漫威迷，海贼迷","categories": ["profile"],
+        "tags": ["profile"],
+        "url": "http://localhost:4000/profile/profile/"
+      },{
         "title": "MathJax test Fourier Transform",
         "excerpt":"Fourier Transform: Inverse Fourier Transform: ","categories": ["math"],
         "tags": ["Fourier Transform"],
@@ -48,6 +53,16 @@ var store = [{
         "excerpt":"Enable table of contents on post or page by adding {% include toc %} where you’d like it to appear.     Table of Contents    HTML Elements  Body text          Blockquotes        List Types          Ordered Lists      Unordered Lists        Tables  Code Snippets  Buttons  NoticesHTML Elements Below is are some HTML elements. Check the source code to see the many embedded elements within paragraphs. Body text Lorem ipsum dolor sit amet, test link adipiscing elit. This is strong. Nullam dignissim convallis est. Quisque aliquam.  This is emphasized. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Blockquotes   Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. List Types Ordered Lists   Item one          sub item one      sub item two      sub item three        Item twoUnordered Lists   Item one  Item two  Item threeTables             Header1      Header2      Header3                  cell1      cell2      cell3              cell4      cell5      cell6                  cell1      cell2      cell3              cell4      cell5      cell6                  Foot1      Foot2      Foot3      Code Snippets #container {  float: left;  margin: 0 -240px 0 0;  width: 100%;}Buttons Make any link standout more when applying the .btn class. &lt;a href=\"#\" class=\"btn btn--success\"&gt;Success Button&lt;/a&gt;Primary ButtonSuccess ButtonWarning ButtonDanger ButtonInfo ButtonNotices Watch out! You can also add notices by appending {: .notice} to a paragraph. ","categories": ["Layout"],
         "tags": ["table of contents"],
         "url": "http://localhost:4000/layout/tt/"
+      },{
+        "title": "Use jupyter on remote server",
+        "excerpt":"If you want to use jupyter on remote server, this blog might be useful. Step1:Run jupyter without browser on  remote server: jupyter notebook --no-browser --port=8888Step2:Bind local port to remote server: ssh -N -f -L localhost:8888:ip:8888 user@ipStep3:Open browser on you local machine and direct to localhost:8888 To Stop Local Process: ps aux|grep jupyterkill pid","categories": ["tools"],
+        "tags": ["jupyter"],
+        "url": "http://localhost:4000/tools/remote-jupyter/"
+      },{
+        "title": "Connect server with spawn and expect",
+        "excerpt":"expect spawn and send #!/usr/bin/expect -f#set timeout 20set sp YourSudoPasswordset passwd UserPassword# sudo is not always necessaryspawn sudo ssh user@ipexpect \"Password:\"send \"$sp\\r\"expect \"some stuff\"send \"$passwd\\r\"interact  spawn: run commands  expect: wait for specify pattern  send: to send the strings to the process","categories": ["tools"],
+        "tags": ["ssh","spawn","server"],
+        "url": "http://localhost:4000/tools/ssh-connect/"
       },{
         "title": "少年",
         "excerpt":"你曾是少年\t\t\t\t\t\t\tYour browser does not support the audio element.\t\t\t你曾是少年，倔强勇敢不改变；你曾是少年，拌嘴吐槽也争先；你曾是少年，啤酒饺子鸡蛋面；你曾是少年，熬夜看书少睡眠；你曾是少年，周易老庄百家言；你曾是少年，江天万里不挂念；你曾是少年，物化生数都等闲；你曾是少年，追云逐日不自谦；你曾是少年，锦绣河山誓踏遍；你曾是少年，怒马扬尘花看厌；你曾是少年，转身告别不留恋。乘风破浪斩敌前，男儿至死是少年。  ","categories": [],

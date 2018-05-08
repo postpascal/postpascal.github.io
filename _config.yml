@@ -16,7 +16,8 @@
 theme: jekyll-theme-so-simple
 # remote_theme: mmistakes/so-simple-theme
 locale: en-US
-title: "紫禁之巅"
+title: "无何有之乡 广袤之野"
+#description: "广袤之野"
 description: "stay hungry stay foolish"
 baseurl: # the subpath of your site, e.g. "/blog"
 url: https://postpascal.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
