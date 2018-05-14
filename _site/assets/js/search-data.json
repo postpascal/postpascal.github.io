@@ -64,6 +64,16 @@ var store = [{
         "tags": ["ssh","spawn","server"],
         "url": "http://localhost:4000/tools/ssh-connect/"
       },{
+        "title": "Some Usefull Tools  in Apple Ecosystem",
+        "excerpt":"Sharing some usefull apple apps In Both IOS and MAC OS:   Things  Fantastical 2  Notability  Reeder  Day One  Duet  Alfread  Bear  MacDown  CheatSheet  MindnoteOnly in MAC OS:   Quiver  Break Time  Alfread  VLC  Rescue Time  NoizioOnly in IOS:   VSCO  Tailor  intiLive  inpaint  pic Sticher  shazam","categories": ["tools"],
+        "tags": ["apple apps"],
+        "url": "http://localhost:4000/tools/apple-tools/"
+      },{
+        "title": "富爸爸穷爸爸",
+        "excerpt":"成书时间:2000作者:罗伯特∙清崎第一章：富人不为钱工作   避开一生中最大的陷阱，乱消费。否则收入越高则消费越高。  忘记自己的工资，别像只驴子一样盯着眼前的胡萝卜🥕。要认清自己想要的。  让感情跟随思想，而不是思想跟随感情。用头脑思考，不受感情控制。第二章：为什么要教授财务知识   明确区分资产和负债，购买资产，减少负债。  资产是把钱放进口袋的，而负债是把钱从口袋拿出去的。  创造现金流，用现金流购买  财富是将资产项产生的现金与支出项流出的现金对比而定第三章：关注自己的事业   获得自己喜欢的，了解的资产第四章：税收的历史和公司的力量   利用公司，合理避税第五章：富人的投资   投资自身的教育，学会更多技能  学习会计，投资，了解市场，法律第六章：学会不为钱工作   不断学习才是一切第七章：客服困难   客服不良习惯，恐惧第八章：开始行动   永远在路上，每天都是一步  总结：就是个披着理财皮的励志鸡汤书，废话连篇，啰里八嗦。就只有前两章有点启发。 ","categories": ["reading"],
+        "tags": ["finance"],
+        "url": "http://localhost:4000/reading/rich-dad/"
+      },{
         "title": "少年",
         "excerpt":"你曾是少年\t\t\t\t\t\t\tYour browser does not support the audio element.\t\t\t你曾是少年，倔强勇敢不改变；你曾是少年，拌嘴吐槽也争先；你曾是少年，啤酒饺子鸡蛋面；你曾是少年，熬夜看书少睡眠；你曾是少年，周易老庄百家言；你曾是少年，江天万里不挂念；你曾是少年，物化生数都等闲；你曾是少年，追云逐日不自谦；你曾是少年，锦绣河山誓踏遍；你曾是少年，怒马扬尘花看厌；你曾是少年，转身告别不留恋。乘风破浪斩敌前，男儿至死是少年。  ","categories": [],
         "tags": [],
