@@ -74,6 +74,26 @@ var store = [{
         "tags": ["finance"],
         "url": "http://localhost:4000/reading/rich-dad/"
       },{
+        "title": "why small teams win",
+        "excerpt":"why small teams win 36氪翻译版：   小团队因为能够快速有效地协调。最重要的是，小团队擅长创造让人关心的环境，在这种环境中，个人的贡献是可以观察到的，而且是有价值的。成功产品的最终命运是它们能很快吸引更多的人来使用它。当我们让更多的人参与项目时，我们需要确保责任、自主权和意义保持不变。这是我们在之前的铅笔例子中看到的。当每个人都创造出他们可以观察和理解的价值时，他们就能有效地运作。换句话说，我们需要在扩大团队规模之前明确为何团队要扩张。一旦我们让人们的个人贡献和责任被稀释，产品就离变得平庸不远了。 每个人都要创造可被观察到的，有价值的贡献 ","categories": ["reading"],
+        "tags": ["teams","efficiency"],
+        "url": "http://localhost:4000/reading/why-small-teams-win/"
+      },{
+        "title": "颠覆式创新",
+        "excerpt":"颠覆式创新   李善友       小公司要想打败大公司必须在大公司的盲区，做大些大公司不会，不屑做的事    公司要想长久存在，必须保持生命力，生长力。破坏，再创新。    公司的对手应该是这个时代，不随着时代进步的公司必定会死亡    有些事，我们不做就一定会有别人做，别人做了就不会有我们的余地了    保持简洁，简单，小而精的模式    永远保持生长的状态，安逸必定会死亡（生于忧患，死于安乐）    另外书中反复提到两本书，一，创新者的窘境，二，疯狂的简洁 ","categories": ["extraction","reading"],
+        "tags": ["enterpries"],
+        "url": "http://localhost:4000/extraction/reading/%E9%A2%A0%E8%A6%86%E5%BC%8F%E5%88%9B%E6%96%B0/"
+      },{
+        "title": "PRINCIPLES",
+        "excerpt":"PRINCIPLES🦉 Ray Dalio 生活的原则   直面严酷的现实，做个超现实的人，确切的规划出现实通往梦想的路  直面痛苦，快速迭代自己，进化  从更高层次俯视自己，把自己想成一个机器，生活想成游戏。  不要受控于自己的情感，凭理智和逻辑行动工作的原则   任何人不应大于体系，离开任何人，体系必须要能正常运行  任何人都应该受到监督，向人汇报  公司应该像机器，好的管理者要像工程师去发现公司的问题，查找问题的根源，解决问题。  公司应有章可循，有规则  公司要尽量透明，紧密，同时关系要融洽。  透明是有限度，分人，分事的  朴素主义 ","categories": ["extraction","reading"],
+        "tags": ["enterpries"],
+        "url": "http://localhost:4000/extraction/reading/principles/"
+      },{
+        "title": "断舍离",
+        "excerpt":"断舍离 山下英子 断$\\bigoplus$舍$ \\Longrightarrow$离 断： 不添加不需要的 舍： 清除放弃不需要的 离： 脱离执念   认清自己真正的需求，真正要的是什么。无论是物质上，还是精神上。只有拨开迷雾，才能找到真实。物质上的单纯也会导致思维上的愉悦与活力。 ","categories": ["extraction","reading"],
+        "tags": ["enterpries","life"],
+        "url": "http://localhost:4000/extraction/reading/%E6%96%AD%E8%88%8D%E7%A6%BB/"
+      },{
         "title": "少年",
         "excerpt":"你曾是少年\t\t\t\t\t\t\tYour browser does not support the audio element.\t\t\t你曾是少年，倔强勇敢不改变；你曾是少年，拌嘴吐槽也争先；你曾是少年，啤酒饺子鸡蛋面；你曾是少年，熬夜看书少睡眠；你曾是少年，周易老庄百家言；你曾是少年，江天万里不挂念；你曾是少年，物化生数都等闲；你曾是少年，追云逐日不自谦；你曾是少年，锦绣河山誓踏遍；你曾是少年，怒马扬尘花看厌；你曾是少年，转身告别不留恋。乘风破浪斩敌前，男儿至死是少年。  ","categories": [],
         "tags": [],
