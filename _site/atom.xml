@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-15T13:46:34+08:00</updated><id>http://localhost:4000/</id><title type="html">无何有之乡 广袤之野</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">K-Means聚类</title><link href="http://localhost:4000/mechine%20learning/clustering/kmeans/" rel="alternate" type="text/html" title="K-Means聚类" /><published>2018-09-15T00:00:00+08:00</published><updated>2018-09-15T00:00:00+08:00</updated><id>http://localhost:4000/mechine%20learning/clustering/kmeans</id><content type="html" xml:base="http://localhost:4000/mechine%20learning/clustering/kmeans/">&lt;blockquote&gt;
-  &lt;p&gt;K-Means 聚类 矩阵形式&lt;/p&gt;
-&lt;/blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-15T13:59:41+08:00</updated><id>http://localhost:4000/</id><title type="html">无何有之乡 广袤之野</title><subtitle>stay hungry stay foolish</subtitle><author><name>Zhang Keke</name><email>apostpascal@gmail.com</email></author><entry><title type="html">K-Means聚类</title><link href="http://localhost:4000/mechine%20learning/clustering/kmeans/" rel="alternate" type="text/html" title="K-Means聚类" /><published>2018-09-15T00:00:00+08:00</published><updated>2018-09-15T00:00:00+08:00</updated><id>http://localhost:4000/mechine%20learning/clustering/kmeans</id><content type="html" xml:base="http://localhost:4000/mechine%20learning/clustering/kmeans/">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;K-Means 聚类 矩阵形式&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;KMeans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -96,7 +94,123 @@
 					&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
 						&lt;span class=&quot;n&quot;&gt;dd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Zhang Keke</name></author><category term="math" /><category term="mechine learning" /><summary type="html">K-Means 聚类 矩阵形式</summary></entry><entry><title type="html">密度聚类</title><link href="http://localhost:4000/mechine%20learning/clustering/density_based_clustering/" rel="alternate" type="text/html" title="密度聚类" /><published>2018-07-17T00:00:00+08:00</published><updated>2018-07-17T00:00:00+08:00</updated><id>http://localhost:4000/mechine%20learning/clustering/density_based_clustering</id><content type="html" xml:base="http://localhost:4000/mechine%20learning/clustering/density_based_clustering/">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;密度聚类假设：聚类结构能通过样本分布的紧密程度来确认&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Zhang Keke</name></author><category term="math" /><category term="mechine learning" /><summary type="html">K-Means 聚类 矩阵形式</summary></entry><entry><title type="html">于我，过去、现在和未来</title><link href="http://localhost:4000/reading/forme/" rel="alternate" type="text/html" title="于我，过去、现在和未来" /><published>2018-08-16T00:00:00+08:00</published><updated>2018-08-16T00:00:00+08:00</updated><id>http://localhost:4000/reading/forme</id><content type="html" xml:base="http://localhost:4000/reading/forme/">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;作者：西格里夫·萨松 &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In me, past, present, future meet&lt;/p&gt;
+
+&lt;p&gt;To hold long chiding conference.&lt;/p&gt;
+
+&lt;p&gt;My lusts usurp the present tense&lt;/p&gt;
+
+&lt;p&gt;And strangle Reason in his seat.&lt;/p&gt;
+
+&lt;p&gt;My loves leap through the future’s fence&lt;/p&gt;
+
+&lt;p&gt;To dance with dream-enfranchised feet.&lt;/p&gt;
+
+&lt;p&gt;In me the cave-man clasps the seer,&lt;/p&gt;
+
+&lt;p&gt;And garlanded Apollo goes&lt;/p&gt;
+
+&lt;p&gt;Chanting to Abraham’s deaf ear.&lt;/p&gt;
+
+&lt;p&gt;In me the tiger sniffs the rose.&lt;/p&gt;
+
+&lt;p&gt;Look in my heart, kind friends, and tremble,&lt;/p&gt;
+
+&lt;p&gt;Since there your elements assemble. &lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;于我，过去、现在和未来&lt;/p&gt;
+
+&lt;p&gt;商讨聚会 各执一词 纷扰不息。&lt;/p&gt;
+
+&lt;p&gt;林林总总的 欲望，掠取着我的现在&lt;/p&gt;
+
+&lt;p&gt;把“理性”扼杀于它的宝座&lt;/p&gt;
+
+&lt;p&gt;我的爱情纷纷越过未来的藩篱&lt;/p&gt;
+
+&lt;p&gt;梦想解放出它们的双脚 舞蹈不停&lt;/p&gt;
+
+&lt;p&gt;于我，穴居人攫取了先知，&lt;/p&gt;
+
+&lt;p&gt;佩戴花环的阿波罗神&lt;/p&gt;
+
+&lt;p&gt;向亚伯拉罕的聋耳唱叹歌吟。&lt;/p&gt;
+
+&lt;p&gt;心有猛虎，细嗅蔷薇。&lt;/p&gt;
+
+&lt;p&gt;审视我的内心吧，亲爱的朋友，你应颤栗，&lt;/p&gt;
+
+&lt;p&gt;因为那才是你本来的面目。&lt;/p&gt;</content><author><name>Zhang Keke</name></author><category term="life" /><summary type="html">作者：西格里夫·萨松</summary></entry><entry><title type="html">随机漫步的傻瓜</title><link href="http://localhost:4000/extraction/reading/randomness/" rel="alternate" type="text/html" title="随机漫步的傻瓜" /><published>2018-08-16T00:00:00+08:00</published><updated>2018-08-16T00:00:00+08:00</updated><id>http://localhost:4000/extraction/reading/randomness</id><content type="html" xml:base="http://localhost:4000/extraction/reading/randomness/">&lt;h1 id=&quot;随机现象与优雅行为&quot;&gt;随机现象与优雅行为&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;随机漫步的傻瓜&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;关于人生在世应该有什么样的行为， 读者应该已经知道我会怎么建议和
+如何说教。 我们说过， 人有情绪反应时， 合乎理性的观念很难听进耳里; 走
+出教室， 我们就不会用到理性的大脑。 一些自助励志书即使不是胡说八道的
+人写的， 大致也没什么效果。 启发人心而且  友善的好建议和具说服力的
+说教， 如果不能拨动我们的心弦， 便将稍纵即逝。 斯多噶哲学有趣的地方，
+在于它强调尊严和个人的美感， 而这是我们基因中的一部分。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;下次碰到厄运时， 不妨开始强调个人举止的优雅。 你应该表现出不管在什么状况下， 都道如何生存” 。&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;行刑日那天把最好的衣服穿上 (仔细刮好胡子)； 挺直腰杆站直， 显现一股傲气， 好在行刑队心里留下美好的印象。 诊断出罹患癌症时， 不要哭天喊地， 一副无辜受害的样子。只和医生讨论病情， 切莫让别人知道， 如此就可避免听到老掉牙的安慰话， 也没人会视你为值得同情的受害人； 此外， 那种有尊严的态度， 可以让挫败和胜利一样， 都叫人觉得具有英雄气概。 赔钱的时候， 务必对你的助理吏为客气， 不要对他发怒 (许多交易员经常这个祥子，令人不齿)。 不要将你的命运怪罪于任何人， 即使他们确实是祸首也是一样。 就算你的另一半和英俊的滑雪教练或年轻但野心不小的模特儿搞上， 也绝不要自怜自艾。 别怨东怨西。 如果你的生意变少， 不要马上哈腰屈膝， 可以像我儿时的好友艾波史雷曼那祥， 发出一封充满英雄气概的电子邮件给同
+行， 告诉他们：“生意虽少，  命运女神唯一不能控制的东西， 是你的行为 。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;祝你好运!&lt;/code&gt;&lt;/p&gt;</content><author><name>Zhang Keke</name></author><category term="Finance" /><summary type="html">随机现象与优雅行为 随机漫步的傻瓜</summary></entry><entry><title type="html">黑天鹅</title><link href="http://localhost:4000/extraction/reading/black-swan/" rel="alternate" type="text/html" title="黑天鹅" /><published>2018-07-23T00:00:00+08:00</published><updated>2018-07-23T00:00:00+08:00</updated><id>http://localhost:4000/extraction/reading/black-swan</id><content type="html" xml:base="http://localhost:4000/extraction/reading/black-swan/">&lt;h1 id=&quot;一半对一半--如何与黑天鹅打成平手&quot;&gt;一半对一半  如何与黑天鹅打成平手&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;黑天鹅，如何预知不可预知的未来&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;一半时间里，我是一个超级怀疑主义者；另一半时间，我又坚定不移地相信事物的确定性. 而且是非常顽固地相信.  当其他人， 尤其是那些被我称为文化市侩的人持轻信态度的时候，我是超级怀疑主义者；当其他人看上去持怀疑态度的时候，我是轻信者。 我对证实的事物持怀疑态度. 但只是在错误的代价很高的时候. 而对证伪的事物不持怀疑态度。 掌握大量数据并不一定能够证实什么，但一个个例就可以证伪. 当我怀疑存在疯狂随机性时，我保持怀疑态度；当我认为只存在温和随机性时， 我选择相信.&lt;/p&gt;
+
+&lt;p&gt;一半时间我讨厌黑天鹅. 另一半时间我热爱黑天鹅。我喜欢为生活带来
+细节、 正面意外、 画家阿佩勒斯的成功， 不必花钱的礼物的随机性。 很少有
+人理解阿佩勒斯故事中的美。 实际上，大部分人通过压抑自己体内的阿佩勒
+斯来避免犯错.&lt;/p&gt;
+
+&lt;p&gt;一半时间我对自己的事务超级保守q，另邂一半时间我超级冒险. 这似平并
+没有什么特别， 只不过我在其他入冒险的地方实行保守主义， 在其他人谨慎
+的地方冒险.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;我不怎么在意小的失败，而是在意大的终极性失败. &lt;/code&gt; 我更担心”极具前
+景“的股栗市场. 尤其是 ”安全的” 蓝筹股. 而不是从事投机的公司，前者
+代表看不见的风险, 后者则不会造成意外l 因为你知道它们的波动性有多大，
+并且可以通过进行小额没资来控制亏损面。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;我不撞心广为人知和耸人昕闻的风险. 而担心更为险恶的隐藏风险.&lt;/code&gt; 我不担心恐怖主又. 而担心糖尿。 我不担心人们通常担心的问题，因为它们显而易见，而担心我们的意识和正常过程以外的事物. (我也必须承认我担心的东西不多，因为我努力只担心有计可施的事情) 我不担心困境. 而担心失去机会。&lt;/p&gt;
+
+&lt;p&gt;最终存在一个小小的决策法则: 当我能够受到正面黑天鹅事件影响时.我会非常冒睑，这时失败只有很小的影响；当我有可能受到负面黑天鹅事件的袭击时，我会非常保守， 当某个模型中的错误对我有好处时. 我会非常冒险，当错误对我有害时，我会非常多疑. 这可能并不十分有趣. 但这正是别人没有做到的。例如，在金融业，人们使用脆弱的理论来管理风险、 把狂野的思想置于 ”理性“的审视之下。&lt;/p&gt;
+
+&lt;p&gt;一半时间我是思想者，另一半时间我是一个理智的实践者. 我对学术问题保持理智和务实，对实际问题保持哲学思考。&lt;/p&gt;
+
+&lt;p&gt;一半时间我很肤浅、 另一半时间我想避免肤浅. 对于美学我很肤浅，对于风险和回报我避兔肤浅。 我的唯美主义让我把诗歌置二散文之上、 把希腊人置干罗马人之上、 把尊严置于优雅之上、 把优雅置于文化之上， 把文化置于学识之上，把学识置于知识之上. 把知识置于智力之山 把智力置干真理之上， 但这一区别只是针对不受黑天鹅影响的事. 我们的本性喜坎理性，除了面对黑天鹅的时候。&lt;/p&gt;
+
+&lt;p&gt;我认识的一半人称我对权威不敬 (你己经看到我对那些柏拉图化的教授们的怦帆 一半人称我对权威奉承 (你己经看到我对休持、 拜耳、 波普尔麒彭加菜、  哈耶克禾口其他人的崇拜)。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;一半时间我讨厌尼采，另一半肘间我喜欢他的散文。&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;何时错过列车没有痛苦&quot;&gt;何时错过列车没有痛苦&lt;/h3&gt;
+
+&lt;p&gt;我曾经得到 另一条改变生活的建议，与我第三章从朋友那里得到的建议不同，它实用、 明智、 有效. 我在巴黎的同学，后来的小悦家让一奥利维尔 ‘ 泰德斯克 认为我不必跑着赶地铁， 他说: “我不会去追赶列车.”&lt;/p&gt;
+
+&lt;p&gt;藐视命运。我一直教我自己拒绝追赶时间表。这可能只是一条很小的建但它印在了我的脑悔里. 从拒绝追赶列车中， 我体会到 优雅的真正价值和行为中的美学，一种控制我的时间，行程和生活的感觉. 错过列车、只有在你追赶它时才是痛苦的！同样， 不能达到别人对你期望的成功. 只有它也是你所追求的东西时才是痛苦的.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;你凌驾于争斗与名利思想之上，而不是之外，只要你愿意这样选择&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;只要是你的决定， 放弃一份高薪职位带来的回报会超过金钱带绐你的效用 (这似平很疯狂， 但我试过并且确实如此） 这是向命运说出，“去XX的” 的第一步. 如果你确定了自己的标准、 你对自己的生活会有大得多的控制。&lt;/p&gt;
+
+&lt;p&gt;大自然给了我们一些防御机制: 如伊索寓言中写到的一桦 其中之一就是把我们不能 (或没有) 吃到的葡萄想成酸的。 但如果你更加主动地在之前就鄙视并拒绝葡荀、 你的满足感会更大. 主动出击， 主动辞职， 只要你有勇气。&lt;/p&gt;
+
+&lt;h3 id=&quot;你在一个自己设计的游戏里更加难以失败&quot;&gt;你在一个自己设计的游戏里更加难以失败.&lt;/h3&gt;
+
+&lt;p&gt;从黑天鹅的角度讲，这意味着只有小概率事件控制你的时候，你才会受到它的影晌。 你要总是控制你自己做什么 把这当成你的目标吧.&lt;/p&gt;
+
+&lt;p&gt;不过，所有这些思想， 所有这些归纳的哲学， 所有这些知识问题， 所有
+这些疯狂的机会和可怕的损失、 在下面这个形而上学的问题面前都变得简单.
+我有时惊异于为什么人们会因为一顿不好吃的饭、 一杯冷咖啡、 一次社交挫折或粗鲁的接待而伤心一天或者感到愤怒， 回忆一下、 我在第八章讨论过人们难以看到自己生活中发生的事件的真实慨率.我们很容易忘记我们活着本身就是极大的运气， 一个可能性微小的事件， 一个极大的偶然.想象一个10亿倍于地球的行星边上的一粒尘埃。 这粒尘埃就代表你出生的概串，庞大的行星则代表相反的概率. 所以不要再为小事烦恼了，不要再像一个忘恩负义者、 得到一座城堡. 还要介意浴室里的霉菌. 不要再捡查别人赠与你的马匹的牙齿， 请记住， 你就是黑天鹅。&lt;/p&gt;</content><author><name>Zhang Keke</name></author><category term="Finance" /><summary type="html">一半对一半 如何与黑天鹅打成平手</summary></entry><entry><title type="html">密度聚类</title><link href="http://localhost:4000/mechine%20learning/clustering/density_based_clustering/" rel="alternate" type="text/html" title="密度聚类" /><published>2018-07-17T00:00:00+08:00</published><updated>2018-07-17T00:00:00+08:00</updated><id>http://localhost:4000/mechine%20learning/clustering/density_based_clustering</id><content type="html" xml:base="http://localhost:4000/mechine%20learning/clustering/density_based_clustering/">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;密度聚类假设：聚类结构能通过样本分布的紧密程度来确认&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;密度聚类核心概念：
 设给定数据集$D={x_1, x_2,x_3 \cdots x_m }$&lt;/p&gt;
@@ -292,95 +406,4 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;总结：就是个披着理财皮的励志鸡汤书，废话连篇，啰里八嗦。就只有前两章有点启发。&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Zhang Keke</name></author><category term="finance" /><summary type="html">成书时间:2000 作者:罗伯特∙清崎</summary></entry><entry><title type="html">Some Usefull Tools in Apple Ecosystem</title><link href="http://localhost:4000/tools/apple-tools/" rel="alternate" type="text/html" title="Some Usefull Tools  in Apple Ecosystem" /><published>2018-05-14T00:00:00+08:00</published><updated>2018-05-14T00:00:00+08:00</updated><id>http://localhost:4000/tools/apple-tools</id><content type="html" xml:base="http://localhost:4000/tools/apple-tools/">&lt;h3 id=&quot;sharing-some-usefull-apple-apps&quot;&gt;Sharing some usefull apple apps&lt;/h3&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;In Both IOS and MAC OS:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Things&lt;/li&gt;
-  &lt;li&gt;Fantastical 2&lt;/li&gt;
-  &lt;li&gt;Notability&lt;/li&gt;
-  &lt;li&gt;Reeder&lt;/li&gt;
-  &lt;li&gt;Day One&lt;/li&gt;
-  &lt;li&gt;Duet&lt;/li&gt;
-  &lt;li&gt;Alfread&lt;/li&gt;
-  &lt;li&gt;Bear&lt;/li&gt;
-  &lt;li&gt;MacDown&lt;/li&gt;
-  &lt;li&gt;CheatSheet&lt;/li&gt;
-  &lt;li&gt;Mindnote&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;Only in MAC OS:&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;ul&gt;
-  &lt;li&gt;Quiver&lt;/li&gt;
-  &lt;li&gt;Break Time&lt;/li&gt;
-  &lt;li&gt;Alfread&lt;/li&gt;
-  &lt;li&gt;VLC&lt;/li&gt;
-  &lt;li&gt;Rescue Time&lt;/li&gt;
-  &lt;li&gt;Noizio&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;Only in IOS:&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;ul&gt;
-  &lt;li&gt;VSCO&lt;/li&gt;
-  &lt;li&gt;Tailor&lt;/li&gt;
-  &lt;li&gt;intiLive&lt;/li&gt;
-  &lt;li&gt;inpaint&lt;/li&gt;
-  &lt;li&gt;pic Sticher&lt;/li&gt;
-  &lt;li&gt;shazam&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="apple apps" /><summary type="html">Sharing some usefull apple apps</summary></entry><entry><title type="html">Connect server with spawn and expect</title><link href="http://localhost:4000/tools/ssh-connect/" rel="alternate" type="text/html" title="Connect server with spawn and expect" /><published>2018-05-08T00:00:00+08:00</published><updated>2018-05-08T00:00:00+08:00</updated><id>http://localhost:4000/tools/ssh-connect</id><content type="html" xml:base="http://localhost:4000/tools/ssh-connect/">&lt;p&gt;&lt;a href=&quot;https://www.thegeekstuff.com/2010/10/expect-examples&quot;&gt;expect spawn and send&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/expect -f&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;#set timeout 20&lt;/span&gt;
-
-&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;sp YourSudoPassword
-&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;passwd UserPassword
-
-&lt;span class=&quot;c&quot;&gt;# sudo is not always necessary&lt;/span&gt;
-
-spawn &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;ssh user@ip
-
-expect &lt;span class=&quot;s2&quot;&gt;&quot;Password:&quot;&lt;/span&gt;
-send &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sp&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-
-expect &lt;span class=&quot;s2&quot;&gt;&quot;some stuff&quot;&lt;/span&gt;
-send &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$passwd&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-interact
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;spawn: run commands&lt;/li&gt;
-  &lt;li&gt;expect: wait for specify pattern&lt;/li&gt;
-  &lt;li&gt;send: to send the strings to the process&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhang Keke</name></author><category term="ssh" /><category term="spawn" /><category term="server" /><summary type="html">expect spawn and send</summary></entry><entry><title type="html">Use jupyter on remote server</title><link href="http://localhost:4000/tools/remote-jupyter/" rel="alternate" type="text/html" title="Use jupyter on remote server" /><published>2018-05-08T00:00:00+08:00</published><updated>2018-05-08T00:00:00+08:00</updated><id>http://localhost:4000/tools/remote-jupyter</id><content type="html" xml:base="http://localhost:4000/tools/remote-jupyter/">&lt;p&gt;If you want to use jupyter on remote server, this blog might be useful.&lt;/p&gt;
-
-&lt;p&gt;Step1:
-Run jupyter without browser on  remote server:&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter notebook &lt;span class=&quot;nt&quot;&gt;--no-browser&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--port&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8888
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Step2:
-Bind local port to remote server:&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh &lt;span class=&quot;nt&quot;&gt;-N&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; localhost:8888:ip:8888 user@ip
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Step3:
-Open browser on you local machine and direct to &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:8888&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;To Stop Local Process:&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ps aux|grep jupyter
-
-&lt;span class=&quot;nb&quot;&gt;kill &lt;/span&gt;pid
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Zhang Keke</name></author><category term="jupyter" /><summary type="html">If you want to use jupyter on remote server, this blog might be useful.</summary></entry></feed>
+&lt;/blockquote&gt;</content><author><name>Zhang Keke</name></author><category term="finance" /><summary type="html">成书时间:2000 作者:罗伯特∙清崎</summary></entry></feed>
