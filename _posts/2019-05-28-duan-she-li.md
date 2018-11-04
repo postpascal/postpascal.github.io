@@ -10,9 +10,12 @@ tags:
   - life
 ---
 
+![](https://img3.doubanio.com/view/subject/m/public/s26872396.jpg =100x20 )
 
-# 断舍离
-`山下英子`
+- Author: 山下英子
+- Publisher: 广西科学技术出版社
+- Publish Date: 2013-7-30
+
 
 # 断$\bigoplus$舍$ \Longrightarrow$离
 
