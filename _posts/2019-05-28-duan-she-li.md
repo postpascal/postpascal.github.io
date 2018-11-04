@@ -10,7 +10,7 @@ tags:
   - life
 ---
 
-![](https://img3.doubanio.com/view/subject/m/public/s26872396.jpg =100x20 )
+![](https://img3.doubanio.com/view/subject/m/public/s26872396.jpg=100x20 )
 
 - Author: 山下英子
 - Publisher: 广西科学技术出版社
