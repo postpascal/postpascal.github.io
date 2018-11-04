@@ -11,7 +11,8 @@ tags:
 ---
 
 
-![](https://img3.doubanio.com/view/subject/m/public/s26872396.jpg =100x200)
+<center><img src="/images/s26872396.jpg" alt="drawing" width="250"/></center>
+
 
 - Author: 山下英子
 - Publisher: 广西科学技术出版社

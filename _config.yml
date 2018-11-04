@@ -98,7 +98,7 @@ defaults:
       type: recipes
     values:
       layout: post
-      comments: true
+      comments: False
       share: true
 # Site Author
 author: 

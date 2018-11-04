@@ -9,7 +9,7 @@ tags:
 ---
 
 
-![](https://img3.doubanio.com/view/subject/m/public/s29578695.jpg)
+<center><img src="/images/s29578695.jpg" alt="drawing" width="250"/></center>
 
 - Author: 李笑来
 - Publisher: 电子工业出版社
