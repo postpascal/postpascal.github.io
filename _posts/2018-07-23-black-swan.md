@@ -3,8 +3,7 @@ title: "黑天鹅"
 author: Zhang Keke
 date: 2018-07-23
 categories:
-  - extraction
-  - reading
+  - READING
 tags:
   - Finance
 ---

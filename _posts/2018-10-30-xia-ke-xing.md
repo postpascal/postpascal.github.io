@@ -3,8 +3,7 @@ title: "侠客行"
 author: Zhang Keke
 date: 2018-10-30
 categories:
-  - thoughts
-  - pome
+  - MINDS
 tags:
   - 武侠
   - 李白

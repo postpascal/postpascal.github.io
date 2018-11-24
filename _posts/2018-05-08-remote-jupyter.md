@@ -3,7 +3,7 @@ title: "Use jupyter on remote server"
 author: Zhang Keke
 date: 2018-05-08
 categories:
-  - tools
+  - COMPUTING
 tags:
   - jupyter
 ---

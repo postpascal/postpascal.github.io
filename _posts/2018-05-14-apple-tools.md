@@ -3,7 +3,7 @@ title: "Some Usefull Tools  in Apple Ecosystem"
 author: Zhang Keke
 date: 2018-05-14
 categories:
-  - tools
+  - COMPUTING
 tags:
   - apple apps
 ---

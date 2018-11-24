@@ -3,7 +3,7 @@ title: "财富自由之路"
 author: Zhang Keke
 date: 2018-10-22
 categories:
-  - invest
+  - INVEST
 tags:
   - 李笑来
 ---

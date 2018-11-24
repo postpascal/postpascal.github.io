@@ -3,8 +3,7 @@ title: "Distributed Tensorflow"
 author: Zhang Keke
 date: 2018-04-02
 categories:
-  - Machine Learning
-  - Deep Learning
+  - MACHINE LEARNING
 tags:
   - Tensorflow
   - Distribution

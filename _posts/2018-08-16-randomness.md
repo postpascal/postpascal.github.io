@@ -3,8 +3,7 @@ title: "随机漫步的傻瓜"
 author: Zhang Keke
 date: 2018-08-16
 categories:
-  - extraction
-  - reading
+  - READING
 tags:
   - Finance
 ---

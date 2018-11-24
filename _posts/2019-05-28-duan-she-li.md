@@ -3,8 +3,7 @@ title: "断舍离"
 author: Zhang Keke
 date: 2018-05-28
 categories:
-  - extraction
-  - reading
+  - READING
 tags:
   - enterpries
   - life

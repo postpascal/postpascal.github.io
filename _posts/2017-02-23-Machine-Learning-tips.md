@@ -3,9 +3,8 @@ title: "Machine Learning Tips"
 author: Zhang Keke
 date: 2018-02-23
 categories:
-  - Machine Learning
-  - Reading
-  - Recap
+  - MACHINE LEARNING
+  - READING
 tags:
   - Tips
 ---

@@ -3,8 +3,7 @@ title: "清醒思考的艺术"
 author: Zhang Keke
 date: 2018-11-10
 categories:
-  - extraction
-  - reading
+  - READING
 tags:
   - Finance
 ---

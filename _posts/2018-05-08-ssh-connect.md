@@ -3,7 +3,7 @@ title: "Connect server with spawn and expect"
 author: Zhang Keke
 date: 2018-05-08
 categories:
-  - tools
+  - COMPUTING
 tags:
   - ssh
   - spawn

@@ -3,7 +3,7 @@ title: "why small teams win"
 author: Zhang Keke
 date: 2018-05-15
 categories:
-  - reading
+  - READING
 tags:
   - teams
   - efficiency
