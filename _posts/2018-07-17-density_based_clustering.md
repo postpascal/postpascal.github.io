@@ -3,7 +3,7 @@ title: "密度聚类"
 author: Zhang Keke
 date: 2018-07-17
 categories:
-  - MACHINE LEARNLING
+  - MACHINE LEARNING
 tags:
   - math
   - mechine learning
